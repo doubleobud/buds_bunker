@@ -4,17 +4,89 @@
         <title>DoubleOBud's Bunker Blog</title>
         <link>https://doubleobud.github.io/buds_bunker/blog</link>
         <description>DoubleOBud's Bunker Blog</description>
-        <lastBuildDate>Mon, 31 Mar 2025 00:47:27 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 31 Mar 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[placeholderblog]]></title>
-            <link>https://doubleobud.github.io/buds_bunker/blog/placeholderblog</link>
-            <guid>https://doubleobud.github.io/buds_bunker/blog/placeholderblog</guid>
-            <pubDate>Mon, 31 Mar 2025 00:47:27 GMT</pubDate>
-            <description><![CDATA[Test]]></description>
-            <content:encoded><![CDATA[<p>Test</p>]]></content:encoded>
+            <title><![CDATA[Your Full Post Title Here]]></title>
+            <link>https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here</link>
+            <guid>https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here</guid>
+            <pubDate>Mon, 31 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[🧭 Purpose]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-purpose">🧭 Purpose<a href="https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here#-purpose" class="hash-link" aria-label="Direct link to 🧭 Purpose" title="Direct link to 🧭 Purpose">​</a></h2>
+<blockquote>
+<p>Briefly explain the point of this post. Why are you writing it?</p>
+</blockquote>
+<p>This post is meant to...</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-summary">🧱 Summary<a href="https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here#-summary" class="hash-link" aria-label="Direct link to 🧱 Summary" title="Direct link to 🧱 Summary">​</a></h2>
+<p>A quick summary or overview of what’s in the post:</p>
+<ul>
+<li>Point 1</li>
+<li>Point 2</li>
+<li>Etc.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-main-content">📖 Main Content<a href="https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here#-main-content" class="hash-link" aria-label="Direct link to 📖 Main Content" title="Direct link to 📖 Main Content">​</a></h2>
+<p>Start writing here...</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="example-subheading">Example Subheading<a href="https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here#example-subheading" class="hash-link" aria-label="Direct link to Example Subheading" title="Direct link to Example Subheading">​</a></h3>
+<p>Break your post into logical sections with <code>###</code> subheadings if needed.</p>
+<p>You can <strong>bold</strong>, <em>italicize</em>, <code>inline code</code>, or use:</p>
+<ul>
+<li>Bullet lists</li>
+<li>Numbered lists</li>
+<li>Links like <a href="https://example.com/" target="_blank" rel="noopener noreferrer">this</a></li>
+<li>Images: <code>![alt text](path/to/image.jpg)</code></li>
+</ul>
+<blockquote>
+<p>Quotes or thoughts like this stand out nicely.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-reflection-or-next-steps-optional">💭 Reflection or Next Steps (Optional)<a href="https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here#-reflection-or-next-steps-optional" class="hash-link" aria-label="Direct link to 💭 Reflection or Next Steps (Optional)" title="Direct link to 💭 Reflection or Next Steps (Optional)">​</a></h2>
+<p>You can use this section to talk about what's next, open questions, lessons learned, etc.</p>
+<hr>
+<p><em>“Optional closing quote or thought here.”</em></p>]]></content:encoded>
+            <category>tag1</category>
+            <category>tag2</category>
+        </item>
+        <item>
+            <title><![CDATA[Your Full Post Title Here]]></title>
+            <link>https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here</link>
+            <guid>https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here</guid>
+            <pubDate>Mon, 31 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[🧭 Purpose]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-purpose">🧭 Purpose<a href="https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here#-purpose" class="hash-link" aria-label="Direct link to 🧭 Purpose" title="Direct link to 🧭 Purpose">​</a></h2>
+<blockquote>
+<p>Briefly explain the point of this post. Why are you writing it?</p>
+</blockquote>
+<p>This post is meant to...</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-summary">🧱 Summary<a href="https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here#-summary" class="hash-link" aria-label="Direct link to 🧱 Summary" title="Direct link to 🧱 Summary">​</a></h2>
+<p>A quick summary or overview of what’s in the post:</p>
+<ul>
+<li>Point 1</li>
+<li>Point 2</li>
+<li>Etc.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-main-content">📖 Main Content<a href="https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here#-main-content" class="hash-link" aria-label="Direct link to 📖 Main Content" title="Direct link to 📖 Main Content">​</a></h2>
+<p>Start writing here...</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="example-subheading">Example Subheading<a href="https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here#example-subheading" class="hash-link" aria-label="Direct link to Example Subheading" title="Direct link to Example Subheading">​</a></h3>
+<p>Break your post into logical sections with <code>###</code> subheadings if needed.</p>
+<p>You can <strong>bold</strong>, <em>italicize</em>, <code>inline code</code>, or use:</p>
+<ul>
+<li>Bullet lists</li>
+<li>Numbered lists</li>
+<li>Links like <a href="https://example.com/" target="_blank" rel="noopener noreferrer">this</a></li>
+<li>Images: <code>![alt text](path/to/image.jpg)</code></li>
+</ul>
+<blockquote>
+<p>Quotes or thoughts like this stand out nicely.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-reflection-or-next-steps-optional">💭 Reflection or Next Steps (Optional)<a href="https://doubleobud.github.io/buds_bunker/blog/your-post-slug-here#-reflection-or-next-steps-optional" class="hash-link" aria-label="Direct link to 💭 Reflection or Next Steps (Optional)" title="Direct link to 💭 Reflection or Next Steps (Optional)">​</a></h2>
+<p>You can use this section to talk about what's next, open questions, lessons learned, etc.</p>
+<hr>
+<p><em>“Optional closing quote or thought here.”</em></p>]]></content:encoded>
+            <category>tag1</category>
+            <category>tag2</category>
         </item>
     </channel>
 </rss>
