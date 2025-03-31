@@ -12,7 +12,6 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        {/* Broken button removed */}
       </div>
     </header>
   );
@@ -25,8 +24,9 @@ export default function Home() {
       title={`Welcome to ${siteConfig.title}`}
       description="Bud’s Universe – A text-based strategy simulation RPG project">
       <HomepageHeader />
-      <main>
-        {/* Add custom content here */}
+      <main style={{ padding: '2rem', textAlign: 'center' }}>
+        <p>This is the beginning of something big.</p>
+        <p>Stay tuned as Bud’s Bunker comes to life.</p>
       </main>
     </Layout>
   );
