@@ -1,7 +1,7 @@
 ---
 slug: your-post-slug-here            # URL-friendly identifier (e.g. "day-zero")
 title: Your Full Post Title Here     # Appears as the big title at top
-authors: [your-author-name]          # Add your GitHub or site handle here
+authors: [joeault]          # Add your GitHub or site handle here
 tags: [tag1, tag2]                   # Optional keywords like ["devlog", "lore", "update"]
 date: 2025-03-31                     # ISO format: YYYY-MM-DD
 ---
