@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbunker=self.webpackChunkbunker||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"First Log","permalink":"/buds_bunker/blog/First_Log","unlisted":false,"date":"2025-03-31T00:00:00.000Z"}]}')}}]);
