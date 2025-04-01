@@ -1,6 +1,6 @@
 ---
 slug: YYYY-MM-DD-ultimate-log   # Example: "2025-03-31-ultimate-log"
-title: "Ultimate Log – [Descriptive Title]"  # Example: "Day Zero – Kickoff"
+title: "Daily Log Template v1.0"  # Example: "Day Zero – Kickoff"
 authors: [joeault]            # Example: [doubleobud]
 tags: [progress, devlog, essential]   # Adjust as needed
 date: 2025-03-31               # Current date (YYYY-MM-DD)
