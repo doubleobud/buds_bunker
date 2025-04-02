@@ -1,12 +1,13 @@
 ---
-slug: YYYY-MM-DD-ultimate-log   # Example: "2025-03-31-ultimate-log"
-title: "Daily Log Template v1.0"  # Example: "Day Zero – Kickoff"
-authors: [joeault]            # Example: [doubleobud]
-tags: [progress, devlog, essential]   # Adjust as needed
-date: 2025-03-31               # Current date (YYYY-MM-DD)
+title: "Daily Log Template"
+description: Template for structured, reflective, and actionable daily blog logs.
+slug: /system/templates/blog-template
+authors: [your-name]
+tags: [progress, devlog, essential]
+date: 2025-03-31
 ---
 
-# 🌟 Daily Log – [Descriptive Title]
+# 🌟 Ultimate Log – [Descriptive Title]
 
 ---
 
