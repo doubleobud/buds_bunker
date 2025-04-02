@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbunker=self.webpackChunkbunker||[]).push([[689],{6201:s=>{s.exports=JSON.parse('{"tags":[{"label":"first steps","permalink":"/buds_bunker/blog/tags/first-steps","count":1}]}')}}]);

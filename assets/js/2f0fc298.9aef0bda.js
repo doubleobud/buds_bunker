@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbunker=self.webpackChunkbunker||[]).push([[2953],{3281:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/buds_bunker/logs","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
