@@ -1,19 +1,21 @@
 ---
-title: Opening Thoughts
-description: A structured, creative snapshot capturing initial intentions at the very start of a project.
-sidebar_label: Opening Thoughts
+title: Project Charter
+description: Foundational vision and guiding intentions for Bud’s Universe and its supporting systems.
+sidebar_label: Charter
+slug: /project/project-charter
+tags: [charter, vision, foundation]
 ---
 
-# 🌀 Opening Thoughts
+# 🌀 Project Charter
 
-**Welcome!** This framework is intended for capturing structured yet raw early-stage thinking. It offers just enough scaffolding to organize initial ideas without disrupting creative flow, perfect for the start of projects, new phases, or mental pivots.
+**Welcome!** This charter captures the structured yet raw early-stage thinking behind Bud’s Universe. It’s designed to organize your ideas without disrupting creative flow—perfect for new phases, fresh cycles, or major pivots.
 
 ---
 
 ## 🗺️ 1. Current Situation
 
-- **Date & Time:** March 31, 2025, at 6:03 PM
-- **Author:** doubleobud
+- **Date & Time:** March 31, 2025, at 6:03 PM  
+- **Author:** doubleobud  
 - **Location:** Home in Peoria, IL
 
 In an ideal scenario, I would have initiated this entry neatly from the very beginning. I've made several attempts at starting projects similar to the one I'll describe below. However, these earlier efforts haven't been wasted, as they've provided valuable lessons and essential components that I carry forward into this current attempt.
@@ -62,9 +64,9 @@ Ultimately, the lifestyle I cultivate to support this project should bring me cl
 
 ## 💬 4. Next Steps
 
-- **1:** Refine and clearly articulate my intentions for this project, using structured best practices informed by these opening thoughts.
-- **2:** Research meta-design concepts for general projects, goals, and intentions, enabling systematic progress towards objectives.
-- **3:** Develop a detailed plan for evolving this website in parallel with the universe-building process. Consider thematic or "in-character" documentation styles, including methods for documenting meta-design development itself.
-- **4:** Implement a digital, online to-do list system.
-- **5:** Initiate blog posting using a simple, standardized template; refine the "Opening Thoughts" template further.
-- **6:** Develop a clear roadmap for "Step Zero"—a foundational phase explicitly encompassing all the elements mentioned above.
+- **1:** Refine and clearly articulate my intentions for this project using structured best practices informed by these opening thoughts.  
+- **2:** Research meta-design concepts for general projects, goals, and intentions—enabling systematic progress toward objectives.  
+- **3:** Develop a detailed plan for evolving this website in parallel with the universe-building process. Consider thematic or "in-character" documentation styles, including methods for documenting meta-design development itself.  
+- **4:** Implement a digital, online to-do list system.  
+- **5:** Initiate blog posting using a simple, standardized template; refine the charter template further.  
+- **6:** Develop a clear roadmap for “Step Zero”—a foundational phase explicitly encompassing all of the above.  

@@ -1,6 +1,9 @@
 ---
-title: Opening Thoughts Template
-description: Structured and creative template for unfiltered snapshot of the very beginning of an intention.
+title: Charter Template
+description: Structured and creative framework for capturing a raw early snapshot of an idea or project.
+sidebar_label: Charter Template
+slug: /system/templates/charter-template
+tags: [template, charter, early-phase, vision]
 ---
 
 # 🌀 Opening Thoughts
