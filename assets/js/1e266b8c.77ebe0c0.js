@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbunker=self.webpackChunkbunker||[]).push([[6578],{8117:e=>{e.exports=JSON.parse('{"tags":[{"label":"setup","permalink":"/buds_bunker/docs/tags/setup","count":5},{"label":"meta","permalink":"/buds_bunker/docs/tags/meta","count":2}]}')}}]);

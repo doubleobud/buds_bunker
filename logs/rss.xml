@@ -4,31 +4,115 @@
         <title>DoubleOBud's Bunker Blog</title>
         <link>https://doubleobud.github.io/buds_bunker/logs</link>
         <description>DoubleOBud's Bunker Blog</description>
-        <lastBuildDate>Wed, 02 Apr 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 05 Apr 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
+            <title><![CDATA[Fourth Log – Navigation]]></title>
+            <link>https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log</link>
+            <guid>https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log</guid>
+            <pubDate>Sat, 05 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Adding navigation elements like a homepage, start here page, and indexes.]]></description>
+            <content:encoded><![CDATA[<p>I took a few days off as my wife left town to head to Las Vegas. I essentially watched Game of Thrones the entire two days as I had never seen it before and the early seasons were quite good.</p>
+<p>Now I want to push into creating all the navigation elements for the site to allow me and any visitors to understand what is happening.</p>
+<p>I am still very much wrestling with the idea of whether this part of the website is purely functional or should serve as a narrative or even game-lite experience. I think I have at least settled on providing the story of what I am doing as more of a narrative someone can follow through—think devlog with all resources integrated along with thoughts, etc.</p>
+<p>I feel all this effort would be much more worthwhile if it was somehow a standalone product in and of itself. Perhaps that is where the narrative page can come in.</p>
+<p>As a to-do, I should consider a simplified presentation starting point to fit the theme if I go this route. It's funny because the development could mirror my technical ramp-up.</p>
+<p>This is such a pain in the ass right now. I do not know why this does not update. This should be showing up and it is not again. I keep having to update this to get it to show up.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-navigation-system-cleanup-to-do-checklist">✅ Navigation System Cleanup To-Do Checklist<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#-navigation-system-cleanup-to-do-checklist" class="hash-link" aria-label="Direct link to ✅ Navigation System Cleanup To-Do Checklist" title="Direct link to ✅ Navigation System Cleanup To-Do Checklist">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-homepage">1. Homepage<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#1-homepage" class="hash-link" aria-label="Direct link to 1. Homepage" title="Direct link to 1. Homepage">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Replace placeholder intro text with a real project welcome</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Add or revise “Latest Development” section</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Finalize Start Here / Narrative buttons</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->(Optional) Add “What’s Next” quick-access block</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-start-here-page">2. Start Here Page<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#2-start-here-page" class="hash-link" aria-label="Direct link to 2. Start Here Page" title="Direct link to 2. Start Here Page">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Replace placeholder section descriptions</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Expand category explanations (Project, System, Logs, etc.)</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Add concrete getting-started guidance</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-narrative-page">3. Narrative Page<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#3-narrative-page" class="hash-link" aria-label="Direct link to 3. Narrative Page" title="Direct link to 3. Narrative Page">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Replace placeholder entries with real log summaries</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Backfill any early milestone logs</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Add phase or chapter structure if needed</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-tag-index">4. Tag Index<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#4-tag-index" class="hash-link" aria-label="Direct link to 4. Tag Index" title="Direct link to 4. Tag Index">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Update tags list based on real content</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Add or remove definitions</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Sync with frontmatter + tags.yml</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-faq-page">5. FAQ Page<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#5-faq-page" class="hash-link" aria-label="Direct link to 5. FAQ Page" title="Direct link to 5. FAQ Page">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Replace placeholder questions/answers</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Add new Q&amp;A relevant to site structure</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Refine tone and format</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-changelog">6. Changelog<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#6-changelog" class="hash-link" aria-label="Direct link to 6. Changelog" title="Direct link to 6. Changelog">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Backfill older structural changes</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Ensure ongoing logging of system updates</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Cross-reference log entries if useful</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="7-document-status-flags">7. Document Status Flags<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#7-document-status-flags" class="hash-link" aria-label="Direct link to 7. Document Status Flags" title="Direct link to 7. Document Status Flags">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Add <code>status: draft|review|final</code> to each doc</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->(Optional) Add visual badges for status on each page</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="8-logs">8. Logs<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#8-logs" class="hash-link" aria-label="Direct link to 8. Logs" title="Direct link to 8. Logs">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Ensure all logs (daily/dev) have real content</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Clean up filenames and metadata</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Optionally add weekly logs (lookahead/review folders)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="9-quick-access-tools-optional">9. Quick Access Tools (Optional)<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#9-quick-access-tools-optional" class="hash-link" aria-label="Direct link to 9. Quick Access Tools (Optional)" title="Direct link to 9. Quick Access Tools (Optional)">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Decide whether to add “Current Focus” widget</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Implement it statically or with live file/tag logic</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="10-testing--qa">10. Testing &amp; QA<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#10-testing--qa" class="hash-link" aria-label="Direct link to 10. Testing &amp; QA" title="Direct link to 10. Testing &amp; QA">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Confirm all sidebar entries work and are organized</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Validate internal links across all pages</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Do mobile and tablet checks</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Clean up inconsistent formatting or layout</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="11-git--deployment">11. Git &amp; Deployment<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#11-git--deployment" class="hash-link" aria-label="Direct link to 11. Git &amp; Deployment" title="Direct link to 11. Git &amp; Deployment">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Commit final changes in small, clear chunks</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Merge to <code>main</code> once fully reviewed</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Deploy new navigation system</li>
+</ul>
+<hr>
+<p>Every piece works—it’s now about replacing scaffolding with real narrative, real structure, and real documentation. The system is laid. The bunker’s map just needs to be filled in.</p>]]></content:encoded>
+            <category>log</category>
+        </item>
+        <item>
             <title><![CDATA[Third Log – Continue Website Foundation]]></title>
-            <link>https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log</link>
-            <guid>https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log</guid>
+            <link>https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log</link>
+            <guid>https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log</guid>
             <pubDate>Wed, 02 Apr 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Working on the website infrastructure to support future creative and technical development.]]></description>
             <content:encoded><![CDATA[<p>Today I will continue to implement all the best practices from the Website Foundational Guide. I completed the first pass on the file structure system ahead of schedule, so we are going to keep advancing the cause.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-next-steps-from-foundational-guide">⛳ Next Steps from “Foundational Guide”<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-next-steps-from-foundational-guide" class="hash-link" aria-label="Direct link to ⛳ Next Steps from “Foundational Guide”" title="Direct link to ⛳ Next Steps from “Foundational Guide”">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-next-steps-from-foundational-guide">⛳ Next Steps from “Foundational Guide”<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-next-steps-from-foundational-guide" class="hash-link" aria-label="Direct link to ⛳ Next Steps from “Foundational Guide”" title="Direct link to ⛳ Next Steps from “Foundational Guide”">​</a></h2>
 <p>Brought over directly from my <a href="https://doubleobud.github.io/buds_bunker/docs/system/website/foundational-guide">Foundational Guide</a> document:</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-file--folder-structure-complete">✅ File &amp; Folder Structure: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-file--folder-structure-complete" class="hash-link" aria-label="Direct link to ✅ File &amp; Folder Structure: COMPLETE" title="Direct link to ✅ File &amp; Folder Structure: COMPLETE">​</a></h3>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-naming-conventions-complete">✅ Naming Conventions: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-naming-conventions-complete" class="hash-link" aria-label="Direct link to ✅ Naming Conventions: COMPLETE" title="Direct link to ✅ Naming Conventions: COMPLETE">​</a></h3>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-git-hygiene-complete">✅ Git Hygiene: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-git-hygiene-complete" class="hash-link" aria-label="Direct link to ✅ Git Hygiene: COMPLETE" title="Direct link to ✅ Git Hygiene: COMPLETE">​</a></h3>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-preview-before-deploy-complete">✅ Preview Before Deploy: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-preview-before-deploy-complete" class="hash-link" aria-label="Direct link to ✅ Preview Before Deploy: COMPLETE" title="Direct link to ✅ Preview Before Deploy: COMPLETE">​</a></h3>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-track-your-sites-history-complete">✅ Track Your Site’s History: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-track-your-sites-history-complete" class="hash-link" aria-label="Direct link to ✅ Track Your Site’s History: COMPLETE" title="Direct link to ✅ Track Your Site’s History: COMPLETE">​</a></h3>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-versioning-discipline-complete">✅ Versioning Discipline: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-versioning-discipline-complete" class="hash-link" aria-label="Direct link to ✅ Versioning Discipline: COMPLETE" title="Direct link to ✅ Versioning Discipline: COMPLETE">​</a></h3>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-dont-over-customize-yet-complete">✅ Don’t Over-Customize Yet: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-dont-over-customize-yet-complete" class="hash-link" aria-label="Direct link to ✅ Don’t Over-Customize Yet: COMPLETE" title="Direct link to ✅ Don’t Over-Customize Yet: COMPLETE">​</a></h3>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-use-frontmatter-early-complete">✅ Use Frontmatter Early: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-use-frontmatter-early-complete" class="hash-link" aria-label="Direct link to ✅ Use Frontmatter Early: COMPLETE" title="Direct link to ✅ Use Frontmatter Early: COMPLETE">​</a></h3>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-keep-everything-linkable-in-progress">🟡 Keep Everything Linkable: IN PROGRESS<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-keep-everything-linkable-in-progress" class="hash-link" aria-label="Direct link to 🟡 Keep Everything Linkable: IN PROGRESS" title="Direct link to 🟡 Keep Everything Linkable: IN PROGRESS">​</a></h3>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-document-your-own-rules-to-do">🟡 Document Your Own Rules: TO-DO<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-document-your-own-rules-to-do" class="hash-link" aria-label="Direct link to 🟡 Document Your Own Rules: TO-DO" title="Direct link to 🟡 Document Your Own Rules: TO-DO">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-file--folder-structure-complete">✅ File &amp; Folder Structure: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-file--folder-structure-complete" class="hash-link" aria-label="Direct link to ✅ File &amp; Folder Structure: COMPLETE" title="Direct link to ✅ File &amp; Folder Structure: COMPLETE">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-naming-conventions-complete">✅ Naming Conventions: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-naming-conventions-complete" class="hash-link" aria-label="Direct link to ✅ Naming Conventions: COMPLETE" title="Direct link to ✅ Naming Conventions: COMPLETE">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-git-hygiene-complete">✅ Git Hygiene: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-git-hygiene-complete" class="hash-link" aria-label="Direct link to ✅ Git Hygiene: COMPLETE" title="Direct link to ✅ Git Hygiene: COMPLETE">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-preview-before-deploy-complete">✅ Preview Before Deploy: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-preview-before-deploy-complete" class="hash-link" aria-label="Direct link to ✅ Preview Before Deploy: COMPLETE" title="Direct link to ✅ Preview Before Deploy: COMPLETE">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-track-your-sites-history-complete">✅ Track Your Site’s History: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-track-your-sites-history-complete" class="hash-link" aria-label="Direct link to ✅ Track Your Site’s History: COMPLETE" title="Direct link to ✅ Track Your Site’s History: COMPLETE">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-versioning-discipline-complete">✅ Versioning Discipline: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-versioning-discipline-complete" class="hash-link" aria-label="Direct link to ✅ Versioning Discipline: COMPLETE" title="Direct link to ✅ Versioning Discipline: COMPLETE">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-dont-over-customize-yet-complete">✅ Don’t Over-Customize Yet: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-dont-over-customize-yet-complete" class="hash-link" aria-label="Direct link to ✅ Don’t Over-Customize Yet: COMPLETE" title="Direct link to ✅ Don’t Over-Customize Yet: COMPLETE">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-use-frontmatter-early-complete">✅ Use Frontmatter Early: COMPLETE<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-use-frontmatter-early-complete" class="hash-link" aria-label="Direct link to ✅ Use Frontmatter Early: COMPLETE" title="Direct link to ✅ Use Frontmatter Early: COMPLETE">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-keep-everything-linkable-in-progress">🟡 Keep Everything Linkable: IN PROGRESS<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-keep-everything-linkable-in-progress" class="hash-link" aria-label="Direct link to 🟡 Keep Everything Linkable: IN PROGRESS" title="Direct link to 🟡 Keep Everything Linkable: IN PROGRESS">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-document-your-own-rules-to-do">🟡 Document Your Own Rules: TO-DO<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-document-your-own-rules-to-do" class="hash-link" aria-label="Direct link to 🟡 Document Your Own Rules: TO-DO" title="Direct link to 🟡 Document Your Own Rules: TO-DO">​</a></h3>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-linking--navigation-system-buildout">🧩 Linking + Navigation System Buildout<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-linking--navigation-system-buildout" class="hash-link" aria-label="Direct link to 🧩 Linking + Navigation System Buildout" title="Direct link to 🧩 Linking + Navigation System Buildout">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-linking--navigation-system-buildout">🧩 Linking + Navigation System Buildout<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-linking--navigation-system-buildout" class="hash-link" aria-label="Direct link to 🧩 Linking + Navigation System Buildout" title="Direct link to 🧩 Linking + Navigation System Buildout">​</a></h2>
 <p>At this stage, I’m focusing on the “Keep Everything Linkable” step—not just ensuring files aren’t orphaned, but creating a deliberate, layered navigation framework.</p>
 <p>This means implementing:</p>
 <ul>
@@ -39,21 +123,21 @@
 </ul>
 <p>I'm treating navigation itself as a system. The goal is for any page—no matter how small or experimental—to live somewhere findable and contextualized, now and in the future.</p>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-navigation--storytelling-strategy-now-locked">🧠 Navigation + Storytelling Strategy Now Locked<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-navigation--storytelling-strategy-now-locked" class="hash-link" aria-label="Direct link to 🧠 Navigation + Storytelling Strategy Now Locked" title="Direct link to 🧠 Navigation + Storytelling Strategy Now Locked">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-navigation--storytelling-strategy-now-locked">🧠 Navigation + Storytelling Strategy Now Locked<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-navigation--storytelling-strategy-now-locked" class="hash-link" aria-label="Direct link to 🧠 Navigation + Storytelling Strategy Now Locked" title="Direct link to 🧠 Navigation + Storytelling Strategy Now Locked">​</a></h2>
 <p>Today I finalized the plan for the site's core storytelling and navigational experience. It's composed of three main pillars:</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-homepage-as-mission-control">🏠 Homepage as Mission Control<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-homepage-as-mission-control" class="hash-link" aria-label="Direct link to 🏠 Homepage as Mission Control" title="Direct link to 🏠 Homepage as Mission Control">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-homepage-as-mission-control">🏠 Homepage as Mission Control<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-homepage-as-mission-control" class="hash-link" aria-label="Direct link to 🏠 Homepage as Mission Control" title="Direct link to 🏠 Homepage as Mission Control">​</a></h3>
 <p>The homepage will serve as the primary navigational hub—not a dashboard with live updates, but a structured, intentional map of the site. It will orient new users, direct followers to the leading edge of the narrative, and organize all categories and tools for me as creator.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-chronological-narrative-timeline">🧵 Chronological Narrative Timeline<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-chronological-narrative-timeline" class="hash-link" aria-label="Direct link to 🧵 Chronological Narrative Timeline" title="Direct link to 🧵 Chronological Narrative Timeline">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-chronological-narrative-timeline">🧵 Chronological Narrative Timeline<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-chronological-narrative-timeline" class="hash-link" aria-label="Direct link to 🧵 Chronological Narrative Timeline" title="Direct link to 🧵 Chronological Narrative Timeline">​</a></h3>
 <p>This is the backbone of the story. A long-form narrative log of the entire project’s evolution—milestones, pivots, progress, and reflections—each with links to the logs, research, or documents they connect to.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-start-here-page">🧭 Start Here Page<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-start-here-page" class="hash-link" aria-label="Direct link to 🧭 Start Here Page" title="Direct link to 🧭 Start Here Page">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-start-here-page">🧭 Start Here Page<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-start-here-page" class="hash-link" aria-label="Direct link to 🧭 Start Here Page" title="Direct link to 🧭 Start Here Page">​</a></h3>
 <p>An onboarding document that teaches newcomers how to understand and use the site. It includes explanations of folders, tags, log types, naming conventions, and where to jump in based on interest.</p>
 <p>I’m locking in this plan going forward. These three elements will be the permanent triad that guides site structure from here out. The <a href="https://doubleobud.github.io/buds_bunker/docs/system/website/navigation-system-plan">Website Navigation Plan</a> document has all the specifics.</p>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-personal-reflection">🧪 Personal Reflection<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-personal-reflection" class="hash-link" aria-label="Direct link to 🧪 Personal Reflection" title="Direct link to 🧪 Personal Reflection">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-personal-reflection">🧪 Personal Reflection<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-personal-reflection" class="hash-link" aria-label="Direct link to 🧪 Personal Reflection" title="Direct link to 🧪 Personal Reflection">​</a></h2>
 <p>There’s a strange satisfaction in doing all this. It feels like world-building—not in a fictional sense, but in an infrastructural one. I’m setting up the scaffolding for a world I haven’t fully built yet, and that’s exciting. It makes it easier to imagine what this place could grow into.</p>
 <p>Once this groundwork is stable, it will allow everything else—fiction, logs, systems, experiments—to evolve organically without collapsing under their own weight.</p>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-whats-next">🔮 What’s Next<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-02-third-log#-whats-next" class="hash-link" aria-label="Direct link to 🔮 What’s Next" title="Direct link to 🔮 What’s Next">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-whats-next">🔮 What’s Next<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-02-third-log#-whats-next" class="hash-link" aria-label="Direct link to 🔮 What’s Next" title="Direct link to 🔮 What’s Next">​</a></h2>
 <ul>
 <li>Finalize homepage layout (design + content)</li>
 <li>Draft the narrative timeline structure and initial entries</li>
@@ -62,18 +146,16 @@
 <li>Write the “Document Your Own Rules” page with conventions and style guides</li>
 </ul>
 <p>The site is just about ready to support its own evolution. From here on out, it’s all about populating the structure and letting the story breathe.</p>]]></content:encoded>
-            <category>devlog</category>
-            <category>planning</category>
-            <category>infrastructure</category>
+            <category>log</category>
         </item>
         <item>
             <title><![CDATA[Second Log – Building the Foundation]]></title>
-            <link>https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-01-second-log</link>
-            <guid>https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-01-second-log</guid>
+            <link>https://doubleobud.github.io/buds_bunker/logs/2025-04-01-second-log</link>
+            <guid>https://doubleobud.github.io/buds_bunker/logs/2025-04-01-second-log</guid>
             <pubDate>Tue, 01 Apr 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Planning out the website infrastructure to support future creative and technical development.]]></description>
             <content:encoded><![CDATA[<p>I want to jump right into making sure this website is safe and secure. There’s no reason to start other work until I know this foundation is rock solid. This isn’t just a way to share—this website <em>is</em> the way I work.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-next-steps-from-opening-thoughts">⛳ Next Steps from “Opening Thoughts”<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-01-second-log#-next-steps-from-opening-thoughts" class="hash-link" aria-label="Direct link to ⛳ Next Steps from “Opening Thoughts”" title="Direct link to ⛳ Next Steps from “Opening Thoughts”">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-next-steps-from-opening-thoughts">⛳ Next Steps from “Opening Thoughts”<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-01-second-log#-next-steps-from-opening-thoughts" class="hash-link" aria-label="Direct link to ⛳ Next Steps from “Opening Thoughts”" title="Direct link to ⛳ Next Steps from “Opening Thoughts”">​</a></h2>
 <p>Brought over directly from my "Opening Thoughts" document:</p>
 <ol>
 <li><strong>Refine and clearly articulate my intentions</strong> for this project using structured best practices informed by these opening thoughts.</li>
@@ -84,12 +166,12 @@
 <li><strong>Develop a clear roadmap for “Step Zero”</strong>—a foundational phase explicitly encompassing all the above elements.</li>
 </ol>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-tackling-step-3-first-evolve-the-website">🛠 Tackling Step 3 First: Evolve the Website<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-01-second-log#-tackling-step-3-first-evolve-the-website" class="hash-link" aria-label="Direct link to 🛠 Tackling Step 3 First: Evolve the Website" title="Direct link to 🛠 Tackling Step 3 First: Evolve the Website">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-tackling-step-3-first-evolve-the-website">🛠 Tackling Step 3 First: Evolve the Website<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-01-second-log#-tackling-step-3-first-evolve-the-website" class="hash-link" aria-label="Direct link to 🛠 Tackling Step 3 First: Evolve the Website" title="Direct link to 🛠 Tackling Step 3 First: Evolve the Website">​</a></h2>
 <blockquote>
 <p><strong>3.</strong> Develop a detailed plan for evolving this website in parallel with the universe-building process. Consider thematic or <em>in-character</em> documentation styles, including methods for documenting meta-design development itself.</p>
 </blockquote>
 <p>I’ve done a little research, but I’m going to start by simply jotting down my thoughts:</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-foundational-notes">🧱 Foundational Notes<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-01-second-log#-foundational-notes" class="hash-link" aria-label="Direct link to 🧱 Foundational Notes" title="Direct link to 🧱 Foundational Notes">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-foundational-notes">🧱 Foundational Notes<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-01-second-log#-foundational-notes" class="hash-link" aria-label="Direct link to 🧱 Foundational Notes" title="Direct link to 🧱 Foundational Notes">​</a></h3>
 <ul>
 <li><strong>a.</strong> I need the website to support my efforts <em>from the top</em>. Systems like the to-do list and document repository should be established early and designed to extend easily.</li>
 <li><strong>b.</strong> I want to avoid early mistakes that I'll deeply regret later.</li>
@@ -102,7 +184,7 @@
 <li><strong>i.</strong> This site will soon begin documenting my research and development process, eventually leading to actual production. Is there anything I should be planning for <em>now</em> that relates to that?</li>
 </ul>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-prompt-for-ai-support">🤖 Prompt for AI Support<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-01-second-log#-prompt-for-ai-support" class="hash-link" aria-label="Direct link to 🤖 Prompt for AI Support" title="Direct link to 🤖 Prompt for AI Support">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-prompt-for-ai-support">🤖 Prompt for AI Support<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-01-second-log#-prompt-for-ai-support" class="hash-link" aria-label="Direct link to 🤖 Prompt for AI Support" title="Direct link to 🤖 Prompt for AI Support">​</a></h2>
 <blockquote>
 <p>See my stream-of-consciousness thoughts above on where I want the website to go next.</p>
 <p>You also have some context documents for background, though let’s prioritize my comments in this log.</p>
@@ -110,13 +192,13 @@
 <p>On that note, try to interpret what I <em>mean</em> even if I’ve said it poorly because of inexperience.</p>
 </blockquote>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-meta-level-note">🧠 Meta-Level Note<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-01-second-log#-meta-level-note" class="hash-link" aria-label="Direct link to 🧠 Meta-Level Note" title="Direct link to 🧠 Meta-Level Note">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-meta-level-note">🧠 Meta-Level Note<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-01-second-log#-meta-level-note" class="hash-link" aria-label="Direct link to 🧠 Meta-Level Note" title="Direct link to 🧠 Meta-Level Note">​</a></h2>
 <p>I really need to methodically tune up how I use AI. A lot of my process is homegrown and I’m probably not getting the best results yet.</p>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="️-break-time">🏋️ Break Time<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-01-second-log#%EF%B8%8F-break-time" class="hash-link" aria-label="Direct link to 🏋️ Break Time" title="Direct link to 🏋️ Break Time">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="️-break-time">🏋️ Break Time<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-01-second-log#%EF%B8%8F-break-time" class="hash-link" aria-label="Direct link to 🏋️ Break Time" title="Direct link to 🏋️ Break Time">​</a></h2>
 <p>Heading off to work out. This afternoon, I’ll start working on the plan.</p>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-follow-up-implementation-plan-chosen">🔧 Follow-Up: Implementation Plan Chosen<a href="https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-04-01-second-log#-follow-up-implementation-plan-chosen" class="hash-link" aria-label="Direct link to 🔧 Follow-Up: Implementation Plan Chosen" title="Direct link to 🔧 Follow-Up: Implementation Plan Chosen">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-follow-up-implementation-plan-chosen">🔧 Follow-Up: Implementation Plan Chosen<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-01-second-log#-follow-up-implementation-plan-chosen" class="hash-link" aria-label="Direct link to 🔧 Follow-Up: Implementation Plan Chosen" title="Direct link to 🔧 Follow-Up: Implementation Plan Chosen">​</a></h2>
 <p>I’m back. I ran the prompt above and created a full document that outlines how to get the website into a rock-solid foundational state. I chose to focus on this first because every future effort—whether creative or technical—depends on this site working seamlessly.</p>
 <p><strong>See the full plan here:</strong><br>
 <!-- -->➡️ <a href="https://doubleobud.github.io/buds_bunker/docs/system/website/foundational-guide">Foundational Guide</a></p>
@@ -129,22 +211,18 @@
 <li>Long-term scalability planning</li>
 </ul>
 <p>This is now the blueprint I’m following going forward.</p>]]></content:encoded>
-            <category>devlog</category>
-            <category>planning</category>
-            <category>infrastructure</category>
+            <category>log</category>
         </item>
         <item>
             <title><![CDATA[First Log – Kickoff]]></title>
-            <link>https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-03-31-first-log</link>
-            <guid>https://doubleobud.github.io/buds_bunker/logs/logs/daily/2025-03-31-first-log</guid>
+            <link>https://doubleobud.github.io/buds_bunker/logs/2025-03-31-first-log</link>
+            <guid>https://doubleobud.github.io/buds_bunker/logs/2025-03-31-first-log</guid>
             <pubDate>Mon, 31 Mar 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[The first official development log after setting up the site structure.]]></description>
             <content:encoded><![CDATA[<p>I have finally structured this website properly after one failed attempt and now I have come to my first log.</p>
 <p>I fully intend to add more structure to these posts over time, but I wanted to start from the simplest point possible for now.</p>
 <p>Today I worked extensively on my <a href="https://doubleobud.github.io/buds_bunker/docs/project/project-charter">Project Charter</a> document to capture my starting point and my initial intentions.</p>]]></content:encoded>
-            <category>devlog</category>
-            <category>first-steps</category>
-            <category>reflection</category>
+            <category>log</category>
         </item>
     </channel>
 </rss>
