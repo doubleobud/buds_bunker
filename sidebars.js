@@ -1,7 +1,32 @@
-// sidebars.js
-
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
+  // 🌐 Global Overview / Orientation Sidebar
+  overviewSidebar: [
+    {
+      type: 'category',
+      label: 'Overview',
+      collapsible: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'start-here',
+          label: '🧭 Start Here',
+        },
+        {
+          type: 'doc',
+          id: 'chronological-narrative',
+          label: '📖 Narrative Timeline',
+        },
+        {
+          type: 'doc',
+          id: 'tag-index',
+          label: '🏷️ Tag Index',
+        },        
+      ],
+    },
+  ],
+
+  // 📜 Project Section
   projectSidebar: [
     {
       type: 'category',
@@ -19,6 +44,7 @@ const sidebars = {
     },
   ],
 
+  // ⚙️ System / Website Section
   systemSidebar: [
     {
       type: 'category',
@@ -32,6 +58,7 @@ const sidebars = {
             'system/website/foundational-guide',
             'system/website/navigation-system-plan',
             'system/website/changelog',
+            'system/website/faq',
           ],
         },
         {
