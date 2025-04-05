@@ -2,9 +2,8 @@
 title: "Fourth Log – Navigation"
 description: Adding navigation elements like a homepage, start here page, and indexes.
 date: 2025-04-05
-authors: [doubleobud]
-tags: [devlog, first-steps]
-slug: logs/daily/2025-04-05-fourth-log
+tags: [log]
+slug: 2025-04-05-fourth-log
 ---
 
 # 🧨 Fourth Log – 4/5/25
@@ -18,6 +17,9 @@ I am still very much wrestling with the idea of whether this part of the website
 I feel all this effort would be much more worthwhile if it was somehow a standalone product in and of itself. Perhaps that is where the narrative page can come in.
 
 As a to-do, I should consider a simplified presentation starting point to fit the theme if I go this route. It's funny because the development could mirror my technical ramp-up.
+
+This is such a pain in the ass right now. I do not know why this does not update. This should be showing up and it is not again. I keep having to update this to get it to show up.
+
 
 ---
 

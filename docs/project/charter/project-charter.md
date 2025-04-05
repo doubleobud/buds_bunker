@@ -3,7 +3,7 @@ title: Project Charter
 description: Foundational vision and guiding intentions for Bud’s Universe and its supporting systems.
 sidebar_label: Charter
 slug: /project/project-charter
-tags: [charter, vision, foundation]
+tags: [setup]
 ---
 
 # 🌀 Project Charter

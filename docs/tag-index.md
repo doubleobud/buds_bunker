@@ -13,35 +13,34 @@ Browse all site content by tag.
 
 This index lets you find entries based on theme, topic, or function—regardless of where they live in the folder structure.
 
----
-
-## 🔧 System & Structure
-
-- [`meta`](/tags/meta) — Planning, conventions, organization
-- [`setup`](/tags/setup) — Technical setup and infrastructure
-- [`structure`](/tags/structure) — Design of systems and file layouts
+> 🔖 Note: This list is manually curated. Some tags may be reserved for future use and are not yet in active content.
 
 ---
 
-## ✍️ Logs & Development
+## ✅ Currently Used Tags
 
-- [`log`](/tags/log) — All daily and dev logs
-- [`devlog`](/tags/devlog) — Deeper developer reflections
-- [`first-steps`](/tags/first-steps) — Foundational progress and major firsts
-- [`todo`](/tags/todo) — Task tracking and priority notes
+### 🔧 System & Setup
+- Setup — Technical setup and infrastructure
+- Meta — Planning, conventions, organization
 
----
-
-## 🧠 Research & Thinking
-
-- [`thinking`](/tags/thinking) — Exploratory or conceptual posts
-- [`philosophy`](/tags/philosophy) — Vision, approach, worldview
-- [`worldbuilding`](/tags/worldbuilding) — Fictional and narrative design
+### ✍️ Logs & Development
+- Log — All daily and dev logs
 
 ---
 
 ## 🔜 Coming Soon
 
-Tags will expand and evolve as more content is added.
+These tags are planned for future content and are not currently in use:
 
-For now, all tags are tracked manually in `tags.yml`.
+- `devlog`
+- `todo`
+- `structure`
+- `philosophy`
+- `thinking`
+- `worldbuilding`
+- `first-steps`
+
+---
+
+Tags will expand and evolve as more content is added.  
+All tags are defined in your `tags.yml` file.

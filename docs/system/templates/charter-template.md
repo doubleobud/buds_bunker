@@ -3,7 +3,7 @@ title: Charter Template
 description: Structured and creative framework for capturing a raw early snapshot of an idea or project.
 sidebar_label: Charter Template
 slug: /system/templates/charter-template
-tags: [template, charter, early-phase, vision]
+tags: [setup]
 ---
 
 # 🌀 Opening Thoughts

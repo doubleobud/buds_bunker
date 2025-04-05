@@ -2,8 +2,7 @@
 title: "Daily Log Template"
 description: Template for structured, reflective, and actionable daily blog logs.
 slug: /system/templates/blog-template
-authors: [your-name]
-tags: [progress, devlog, essential]
+tags: [setup]
 date: 2025-03-31
 ---
 

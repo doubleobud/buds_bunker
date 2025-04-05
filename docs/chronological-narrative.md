@@ -18,25 +18,25 @@ Every update here reflects a moment in the broader project’s development. Logs
 
 ## 📅 Phase 0: Setup, Foundation, and Meta-Design
 
-### 🗓️ March 31, 2025 — [First Log](/logs/daily/2025-03-31-first-log)
+### 🗓️ March 31, 2025 — [First Log](/logs/2025-03-31-first-log)
 
 > After years of circling this idea, I’m finally starting Buds Bunker for real. I’m taking the long road: methodical, designed, and sustainable. This site is the first step.
 
 ---
 
-### 🗓️ April 1, 2025 — [Second Log: Website Planning](/logs/daily/2025-04-01-second-log)
+### 🗓️ April 1, 2025 — [Second Log: Website Planning](/logs/2025-04-01-second-log)
 
 > This entry kicks off the real strategic work: defining how this site supports the project. I brainstorm how it will evolve, how to avoid early mistakes, and why the website *is* the work.
 
 ---
 
-### 🗓️ April 2, 2025 — [Third Log](/logs/daily/2025-04-02-third-log)
+### 🗓️ April 2, 2025 — [Third Log](/logs/2025-04-02-third-log)
 
 > Continued refining the structural foundation. I'm leaning into a “narrative-first” design strategy and clarified how logs, templates, and documentation should evolve.
 
 ---
 
-### 🗓️ April 5, 2025 — [Fourth Log](/logs/daily/2025-04-05-fourth-log)
+### 🗓️ April 5, 2025 — [Fourth Log](/logs/2025-04-05-fourth-log)
 
 > Homepage and onboarding pages are now built. I’m moving quickly through foundational elements, setting the stage for deeper creative and meta-design work.
 

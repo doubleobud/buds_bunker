@@ -2,9 +2,8 @@
 title: "Second Log – Building the Foundation"
 description: Planning out the website infrastructure to support future creative and technical development.
 date: 2025-04-01
-authors: [doubleobud]
-tags: [devlog, planning, infrastructure]
-slug: logs/daily/2025-04-01-second-log
+tags: [log]
+slug: 2025-04-01-second-log
 ---
 
 # 🧨 Second Log — April 1st, 2025

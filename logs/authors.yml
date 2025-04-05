@@ -1,14 +1,5 @@
-joeault:
-  name: Joe Ault
-  title: Bunker Operator
-  url: https://github.com/doubleobud
-  image_url: https://github.com/doubleobud.png
-  page: true
-  socials:
-    github: doubleobud
-
 doubleobud:
-  name: Joe Ault
+  name: doubleobud
   title: Bunker Operator
   url: https://github.com/doubleobud
   image_url: https://github.com/doubleobud.png

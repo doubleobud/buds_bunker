@@ -31,7 +31,7 @@ const config = {
           editUrl: 'https://github.com/doubleobud/buds_bunker/tree/main/',
         },
         blog: {
-          path: 'logs',
+          path: 'logs/daily',
           routeBasePath: 'logs',
           blogSidebarTitle: 'Logs',
           blogSidebarCount: 'ALL',

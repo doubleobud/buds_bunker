@@ -42,7 +42,7 @@ All content falls into **clear categories**:
 Documents about the project vision, charter, narrative design, and meta-concepts.
 
 Start with:  
-👉 [`Project Charter`](/docs/project/charter/project-charter)
+👉 [`Project Charter`](/docs/project/project-charter)
 
 ---
 
@@ -62,7 +62,7 @@ Short-form documentation of progress. These include:
 - Devlogs
 
 Example:  
-👉 [`Second Log`](/logs/daily/2025-04-01-second-log)
+👉 [`Second Log`](/logs/2025-04-01-second-log)
 
 ---
 
