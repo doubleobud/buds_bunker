@@ -1,11 +1,11 @@
 ---
 title: Website Navigation System Plan
 description: A comprehensive, step-by-step guide to integrating navigation, narrative, and documentation for Buds Bunker.
-author: DoubleOBud
+author: doubleobud
 date: 2025-04-02
 sidebar_label: Website Navigation System Plan
 slug: /system/website/navigation-system-plan
-tags: [website, setup, best-practices, guide]
+tags: [setup]
 ---
 
 # Webstite Navigation System Plan

@@ -3,7 +3,7 @@ title: Website Foundational Guide
 description: Blueprint for building a scalable Docusaurus site with best practices, structure, and growth plans.
 sidebar_label: Website Foundational Guide
 slug: /system/website/foundational-guide
-tags: [website, setup, best-practices, guide]
+tags: [setup]
 ---
 
 # Foundational Guide for DoubleOBud's Bunker

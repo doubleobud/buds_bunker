@@ -6,7 +6,7 @@ description: Answers to common questions about Buds Bunker and how to use this s
 slug: /system/website/faq
 sidebar_position: 4
 sidebar: systemSidebar
-tags: [meta, onboarding]
+tags: [meta]
 ---
 
 # 🙋 Visitor FAQ

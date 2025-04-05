@@ -34,18 +34,18 @@ export default function Home() {
 
           <h2 className="margin-top--lg">🔗 Explore Sections</h2>
           <ul className="margin-top--md">
-            <li><Link to="/docs/project/charter/project-charter">📜 Project: Charter & Vision</Link></li>
+            <li><Link to="/docs/project/project-charter">📜 Project: Charter & Vision</Link></li>
             <li><Link to="/docs/system/website/foundational-guide">⚙️ System: Foundational Setup</Link></li>
-            <li><Link to="/logs/daily/">🗓️ Daily Logs</Link></li>
+            <li><Link to="/logs/">🗓️ Daily Logs</Link></li>
             <li><Link to="/docs/system/templates/blog-template">🧱 Templates</Link></li>
             <li><Link to="/docs/tag-index">🏷️ Browse by Tag</Link></li>
           </ul>
 
-          {/* Optional Latest Update Teaser */}
+          {/* Optional Latest Update Teaser this comments suck Same thing here. I keep having to comment.*/}
           <div className="margin-top--xl">
             <h3>🧩 Latest Development</h3>
             <p>
-              April 1, 2025 — <Link to="/logs/daily/2025-04-01-second-log">Second Log: Website Planning</Link>
+              April 1, 2025 — <Link to="/logs/2025-04-01-second-log">Second Log: Website Planning</Link>
             </p>
           </div>
         </div>

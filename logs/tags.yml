@@ -1,8 +1,16 @@
-- label: meta
-- label: log
-- label: devlog
-- label: setup
-- label: todo
-- label: structure
-- label: philosophy
-- label: thinking
+meta:
+  label: meta
+log:
+  label: log
+devlog:
+  label: devlog
+setup:
+  label: setup
+todo:
+  label: todo
+structure:
+  label: structure
+philosophy:
+  label: philosophy
+thinking:
+  label: thinking
