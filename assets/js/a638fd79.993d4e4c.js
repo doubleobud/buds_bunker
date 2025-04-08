@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbunker=self.webpackChunkbunker||[]).push([[3801],{1624:e=>{e.exports=JSON.parse('{"tags":[{"label":"log","permalink":"/buds_bunker/logs/tags/log","count":5}]}')}}]);

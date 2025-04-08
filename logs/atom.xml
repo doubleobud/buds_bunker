@@ -2,11 +2,91 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://doubleobud.github.io/buds_bunker/logs</id>
     <title>DoubleOBud's Bunker Blog</title>
-    <updated>2025-04-05T00:00:00.000Z</updated>
+    <updated>2025-04-07T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://doubleobud.github.io/buds_bunker/logs"/>
     <subtitle>DoubleOBud's Bunker Blog</subtitle>
     <icon>https://doubleobud.github.io/buds_bunker/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Fifth Log – Navigation Customization]]></title>
+        <id>https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log</id>
+        <link href="https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log"/>
+        <updated>2025-04-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Editing the new navigation pages today to allow users to properly interact with the site.]]></summary>
+        <content type="html"><![CDATA[<p>Another day off yesterday after doing some morning drinking and breakfast with my parents. I really am not sharp enough mentally to do this kind of work after boozing haha.</p>
+<p>Today is all about making the site work for users. I just am going to jump into the list below and my general edit of all the pages.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-navigation-system-cleanup-to-do-checklist">✅ Navigation System Cleanup To-Do Checklist<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log#-navigation-system-cleanup-to-do-checklist" class="hash-link" aria-label="Direct link to ✅ Navigation System Cleanup To-Do Checklist" title="Direct link to ✅ Navigation System Cleanup To-Do Checklist">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-homepage">1. Homepage<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log#1-homepage" class="hash-link" aria-label="Direct link to 1. Homepage" title="Direct link to 1. Homepage">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Replace placeholder intro text with a real project welcome</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Add or revise “Latest Development” section</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Finalize Start Here / Narrative buttons</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->(Optional) Add “What’s Next” quick-access block</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-start-here-page">2. Start Here Page<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log#2-start-here-page" class="hash-link" aria-label="Direct link to 2. Start Here Page" title="Direct link to 2. Start Here Page">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Replace placeholder section descriptions</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Expand category explanations (Project, System, Logs, etc.)</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Add concrete getting-started guidance</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-narrative-page">3. Narrative Page<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log#3-narrative-page" class="hash-link" aria-label="Direct link to 3. Narrative Page" title="Direct link to 3. Narrative Page">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Replace placeholder entries with real log summaries</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Backfill any early milestone logs</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Add phase or chapter structure if needed</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-tag-index">4. Tag Index<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log#4-tag-index" class="hash-link" aria-label="Direct link to 4. Tag Index" title="Direct link to 4. Tag Index">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Update tags list based on real content</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Add or remove definitions</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Sync with frontmatter + tags.yml</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-faq-page">5. FAQ Page<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log#5-faq-page" class="hash-link" aria-label="Direct link to 5. FAQ Page" title="Direct link to 5. FAQ Page">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Replace placeholder questions/answers</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Add new Q&amp;A relevant to site structure</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Refine tone and format</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-changelog">6. Changelog<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log#6-changelog" class="hash-link" aria-label="Direct link to 6. Changelog" title="Direct link to 6. Changelog">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Backfill older structural changes</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Ensure ongoing logging of system updates</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Cross-reference log entries if useful</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="7-document-status-flags">7. Document Status Flags<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log#7-document-status-flags" class="hash-link" aria-label="Direct link to 7. Document Status Flags" title="Direct link to 7. Document Status Flags">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Add <code>status: draft|review|final</code> to each doc</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->(Optional) Add visual badges for status on each page</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="8-logs">8. Logs<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log#8-logs" class="hash-link" aria-label="Direct link to 8. Logs" title="Direct link to 8. Logs">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Ensure all logs (daily/dev) have real content</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Clean up filenames and metadata</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Optionally add weekly logs (lookahead/review folders)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="9-quick-access-tools-optional">9. Quick Access Tools (Optional)<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log#9-quick-access-tools-optional" class="hash-link" aria-label="Direct link to 9. Quick Access Tools (Optional)" title="Direct link to 9. Quick Access Tools (Optional)">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Decide whether to add “Current Focus” widget</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Implement it statically or with live file/tag logic</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="10-testing--qa">10. Testing &amp; QA<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log#10-testing--qa" class="hash-link" aria-label="Direct link to 10. Testing &amp; QA" title="Direct link to 10. Testing &amp; QA">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Confirm all sidebar entries work and are organized</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Validate internal links across all pages</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Do mobile and tablet checks</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Clean up inconsistent formatting or layout</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="11-git--deployment">11. Git &amp; Deployment<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log#11-git--deployment" class="hash-link" aria-label="Direct link to 11. Git &amp; Deployment" title="Direct link to 11. Git &amp; Deployment">​</a></h3>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Commit final changes in small, clear chunks</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Merge to <code>main</code> once fully reviewed</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Deploy new navigation system</li>
+</ul>
+<hr>
+<p>Every piece works—it’s now about replacing scaffolding with real narrative, real structure, and real documentation. The system is laid. The bunker’s map just needs to be filled in.</p>]]></content>
+        <category label="log" term="log"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Fourth Log – Navigation]]></title>
         <id>https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log</id>
@@ -18,7 +98,6 @@
 <p>I am still very much wrestling with the idea of whether this part of the website is purely functional or should serve as a narrative or even game-lite experience. I think I have at least settled on providing the story of what I am doing as more of a narrative someone can follow through—think devlog with all resources integrated along with thoughts, etc.</p>
 <p>I feel all this effort would be much more worthwhile if it was somehow a standalone product in and of itself. Perhaps that is where the narrative page can come in.</p>
 <p>As a to-do, I should consider a simplified presentation starting point to fit the theme if I go this route. It's funny because the development could mirror my technical ramp-up.</p>
-<p>This is such a pain in the ass right now. I do not know why this does not update. This should be showing up and it is not again. I keep having to update this to get it to show up.</p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-navigation-system-cleanup-to-do-checklist">✅ Navigation System Cleanup To-Do Checklist<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#-navigation-system-cleanup-to-do-checklist" class="hash-link" aria-label="Direct link to ✅ Navigation System Cleanup To-Do Checklist" title="Direct link to ✅ Navigation System Cleanup To-Do Checklist">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-homepage">1. Homepage<a href="https://doubleobud.github.io/buds_bunker/logs/2025-04-05-fourth-log#1-homepage" class="hash-link" aria-label="Direct link to 1. Homepage" title="Direct link to 1. Homepage">​</a></h3>
