@@ -4,27 +4,66 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* 🌞 LIGHT MODE: Grounded, muted, readable */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Primary green system */
+  --ifm-color-primary: #31544c;
+  --ifm-color-primary-dark: #2a483f;
+  --ifm-color-primary-darker: #243e36;
+  --ifm-color-primary-darkest: #1c2f2a;
+  --ifm-color-primary-light: #3c665c;
+  --ifm-color-primary-lighter: #447469;
+  --ifm-color-primary-lightest: #50897d;
+
+  /* Library-inspired base colors */
+  --ifm-background-color: #e6e0d2;              /* Light parchment beige */
+  --ifm-font-color-base: #2b2b1f;               /* Dark ink / sepia */
+  --ifm-heading-color: #1e1e1e;                 /* Bold black-ink tone */
+
+  /* Accents */
+  --ifm-color-info: #607d8b;                    /* Muted slate blue */
+  --ifm-color-success: #4e705f;                 /* Moss green */
+  --ifm-color-warning: #caa76a;                 /* Brass/tan */
+  --ifm-color-danger: #904c3e;                  /* Burnt sienna */
+
+  /* Navbar (banner) styling */
+  --ifm-navbar-background-color: #a3967f;       /* Richer, darker parchment for contrast */
+  --ifm-navbar-link-color: #1e1e1e;
+  --ifm-navbar-link-hover-color: #31544c;
+  --ifm-navbar-shadow: inset 0 -1px 0 #c3b79d;  /* subtle bottom border */
+
+  /* Code + UI */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(50, 50, 50, 0.05);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* 🌚 DARK MODE: Soothing, high contrast, futuristic */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Brighter teals for energy and clarity */
+  --ifm-color-primary: #4fd1b8;
+  --ifm-color-primary-dark: #3ab9a1;
+  --ifm-color-primary-darker: #33a08d;
+  --ifm-color-primary-darkest: #2b8576;
+  --ifm-color-primary-light: #64d7bf;
+  --ifm-color-primary-lighter: #80dfcb;
+  --ifm-color-primary-lightest: #a2ede0;
+
+  /* Base + type */
+  --ifm-background-color: #121917;
+  --ifm-font-color-base: #e2f3ef;
+  --ifm-heading-color: #c1f0e7;
+
+  /* Accents */
+  --ifm-color-info: #80c0ce;
+  --ifm-color-success: #6bc2b2;
+  --ifm-color-warning: #e0aa4f;
+  --ifm-color-danger: #e26f64;
+
+  /* Navbar (banner) styling */
+  --ifm-navbar-background-color: #080d0c;       /* Even deeper black for richer contrast */
+  --ifm-navbar-link-color: #d3f6ef;
+  --ifm-navbar-link-hover-color: #4fd1b8;
+  --ifm-navbar-shadow: inset 0 -1px 0 #1e2a27;  /* subtle shadow divider */
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
 }

@@ -51,10 +51,9 @@ const config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: "DoubleOBud's Bunker",
       logo: {
         alt: 'DoubleOBud Logo',
-        src: 'img/logo.svg',
+        src: 'img/buds-bunker-header-logo.png',
       },
       items: [
         { to: '/logs', label: 'Logs', position: 'left' },

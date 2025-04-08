@@ -1,23 +1,125 @@
 /**
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
+ * This file styles the homepage hero section, buttons, logo, and general layout.
  */
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
+/* =====================================================
+   HERO SECTION STYLING
+   - Controls top banner/hero block layout, spacing, and background.
+   ===================================================== */
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+   .heroSection {
+    padding: 1rem 0 5rem; /* Top, Bottom padding in light mode */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #cdc3af; /* 🟤 Slightly darker parchment/tan for light mode */
   }
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  
+  [data-theme='dark'] .heroSection {
+    background-color: #0d1513; /* ⚫ Deep black-green blend for dark mode */
+    background: linear-gradient(to bottom, #0a0f0e 0%, #121917 100%);
+    padding: 1rem 0 5rem; /* Same spacing as light mode for balance */
+  }
+  
+  /* Responsive tweaks for smaller screens */
+  @media screen and (max-width: 996px) {
+    .heroSection {
+      padding: 2rem 1rem 4rem;
+    }
+  }
+  
+  /* =====================================================
+     HERO TITLE + SUBTITLE
+     ===================================================== */
+  
+  .myHeroTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  /* Use this for the hero subtitle (under the big title) */
+  .hero__subtitle {
+    color: #3b3a34;        /* 🟫 Inkier dark gray for light mode */
+    font-weight: 500;
+    max-width: 60ch;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  [data-theme='dark'] .hero__subtitle {
+    color: #d7e7de;        /* 🌿 Soft mint for dark mode */
+  }
+  
+  /* =====================================================
+     LOGO CONTAINER (wrapped around <img>)
+     ===================================================== */
+  
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04); /* 🟫 Dark-mode-style overlay in light mode */
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.05); /* Same shadow across both modes */
+    max-width: 90%;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .logoImage {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+  }
+  
+  [data-theme='dark'] .logoContainer {
+    background: rgba(255, 255, 255, 0.04); /* Matching background for dark mode */
+    /* No need to duplicate shadow—it's already uniform */
+  }
+  
+  /* =====================================================
+     BUTTONS
+     ===================================================== */
+  
+  .myCustomButton {
+    background-color: #366139;         /* 🌲 Dark green */
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #000000;        /* 🖤 Black border */
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  }
+  
+  .myCustomButton:hover {
+    background-color: #237b2b;         /* 🟢 Slightly lighter green on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+    cursor: pointer;
+  }
+  
+  /* CTA BUTTON CONTAINER (wraps the two homepage buttons) */
+  .ctaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem; /* 🧭 Adds breathing room below the subtitle */
+  }
+  
+  /* =====================================================
+     EXTRA SECTIONS? Add here
+     ===================================================== */
+  
+  /* For newsletterSection, testimonials, etc., extend here as needed */
+  
+  
