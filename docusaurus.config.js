@@ -1,6 +1,7 @@
 // @ts-check
-import { themes as prismThemes } from 'prism-react-renderer';
-import path from 'path';
+
+const path = require('path');
+const { themes: prismThemes } = require('prism-react-renderer');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -65,9 +66,9 @@ const config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'systemSidebar', // ✅ updated from websiteSidebar
+          sidebarId: 'systemSidebar',
           position: 'left',
-          label: 'System', // ✅ updated from "Website"
+          label: 'System',
         },
         {
           href: 'https://github.com/doubleobud/buds_bunker',
@@ -81,6 +82,8 @@ const config = {
       darkTheme: prismThemes.dracula,
     },
   },
+
+  plugins: [require.resolve('./plugins/webpack-dotenv')],
 };
 
-export default config;
+module.exports = config;
