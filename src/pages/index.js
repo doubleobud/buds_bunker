@@ -30,7 +30,7 @@ export default function Home() {
           <h1 className={styles.myHeroTitle}>FOLLOW THE BUILDING OF A SIMULATION UNIVERSE</h1>
           {/* Tagline: A concise statement explaining your project in one sentence */}
           <p className="hero__subtitle">
-          Experience the technological evolution of an interactive sandbox along with the life behind its' making.
+          Experience the technological evolution of an interactive sandbox along with the life behind its making.
           </p>
           {/* Primary Call-to-Action Buttons */}
           <div className={styles.ctaContainer}>
