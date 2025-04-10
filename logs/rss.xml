@@ -4,10 +4,33 @@
         <title>DoubleOBud's Bunker Blog</title>
         <link>https://doubleobud.github.io/buds_bunker/logs</link>
         <description>DoubleOBud's Bunker Blog</description>
-        <lastBuildDate>Mon, 07 Apr 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 09 Apr 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Seventh Log – User Account Implementation]]></title>
+            <link>https://doubleobud.github.io/buds_bunker/logs/2025-04-09-seventh-log</link>
+            <guid>https://doubleobud.github.io/buds_bunker/logs/2025-04-09-seventh-log</guid>
+            <pubDate>Wed, 09 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Today I am implementing a user account system that will produce save data.]]></description>
+            <content:encoded><![CDATA[<p>I have already taken last night's research and rolled that into documentation to build today's process. My file management is slipping right now, but I am close to starting the narrative which should organize the entire process for both me and the user.</p>
+<p>I know my writing is not as interesting at this point, but I plan to revamp this process once I am past this website setup phase. I feel progressing any further without that in place would be a major mistake.</p>
+<hr>]]></content:encoded>
+            <category>log</category>
+        </item>
+        <item>
+            <title><![CDATA[Sixth Log – Homepage Editing & User Account Research]]></title>
+            <link>https://doubleobud.github.io/buds_bunker/logs/2025-04-08-sixth-log</link>
+            <guid>https://doubleobud.github.io/buds_bunker/logs/2025-04-08-sixth-log</guid>
+            <pubDate>Tue, 08 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Finishing up the homepage today and then going to researching how I can implemenet user accounts and save data.]]></description>
+            <content:encoded><![CDATA[<p>I am writing this the day after as I got carried away and jumped right back into work yesterday. The homepage is complete for now and looking good. There is some material below the 'hero section' that I need to clean up yet, but I am happy with the top of the screen.</p>
+<p>I researched methods of creating user accounts and how I can create save data etc. This resulted and several documents I am pushing forward to implementation in the following days.</p>
+<p>Soon I hope to have the bones of the website and the user introduction so we can move on to broader project system designa and implementation.</p>
+<hr>]]></content:encoded>
+            <category>log</category>
+        </item>
         <item>
             <title><![CDATA[Fifth Log – Navigation Customization]]></title>
             <link>https://doubleobud.github.io/buds_bunker/logs/2025-04-07-fourth-log</link>
