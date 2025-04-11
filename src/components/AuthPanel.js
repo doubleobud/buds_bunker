@@ -1,66 +1,64 @@
-import React, { useState } from 'react';
-import { useHistory } from '@docusaurus/router';
-import { signUp, signIn, signOut } from '../services/auth';
-import { createDefaultCharacter } from '../services/character';
-import { supabase } from '../services/supabaseClient';
+import React, { useState } from 'react'
+import { useHistory } from '@docusaurus/router'
+import { signUp, signIn, signOut } from '@site/src/services/auth'
+import { createCharacterIfNotExists } from '@site/src/services/character'
+import { BASE_URL } from '@site/src/config/constants'
 
 export default function AuthPanel() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [user, setUser] = useState(null);
-  const [message, setMessage] = useState('');
-  const history = useHistory();
+  const history = useHistory()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [user, setUser] = useState(null)
+  const [message, setMessage] = useState('')
 
   const handleSignUp = async () => {
     try {
-      const { error } = await signUp(email, password);
-      if (error) throw error;
-
-      setMessage(
-        '✅ Sign-up successful! Please check your email to confirm your account before signing in.'
-      );
+      await signUp(email, password)
+      setMessage('✅ Sign-up successful! Please check your email to confirm.')
     } catch (err) {
-      console.error(err);
-      setMessage(`Sign-up error: ${err.message}`);
+      console.error(err)
+      setMessage(`❌ Sign-up failed: ${err.message}`)
     }
-  };
+  }
 
   const handleSignIn = async () => {
     try {
-      const { user: signedInUser, error } = await signIn(email, password);
-      if (error) throw error;
+      const { user: signedInUser } = await signIn(email, password)
+      if (!signedInUser || !signedInUser.id) {
+        throw new Error('Missing or invalid user from Supabase')
+      }
 
-      setUser(signedInUser);
-      setMessage('Signed in! Creating character...');
+      setUser(signedInUser)
+      setMessage('🔄 Signed in! Checking for character...')
 
-      await createDefaultCharacter(signedInUser.id);
-      setMessage('Character created! Redirecting to profile...');
-
-      setTimeout(() => {
-        history.push('/profile');
-      }, 2000);
+      try {
+        await createCharacterIfNotExists()
+        setMessage('✅ Character ready! Redirecting...')
+        setTimeout(() => history.push(`${BASE_URL}/profile`), 2000)
+      } catch (charErr) {
+        console.error(charErr)
+        setMessage('❌ Character creation failed. Please try again or contact support.')
+      }
     } catch (err) {
-      console.error(err);
-      setMessage(`Sign-in error: ${err.message}`);
+      console.error(err)
+      setMessage(`❌ Sign-in failed: ${err.message}`)
     }
-  };
+  }
 
   const handleSignOut = async () => {
     try {
-      const { error } = await signOut();
-      if (error) throw error;
-
-      setUser(null);
-      setMessage('Signed out.');
+      await signOut()
+      setUser(null)
+      setMessage('👋 Signed out.')
     } catch (err) {
-      console.error(err);
-      setMessage(`Sign-out error: ${err.message}`);
+      console.error(err)
+      setMessage(`❌ Sign-out failed: ${err.message}`)
     }
-  };
+  }
 
   return (
-    <div style={{ padding: '1rem', border: '1px solid #444' }}>
-      <h2>🧪 Auth Panel</h2>
+    <div style={{ padding: '1rem', border: '1px solid #ccc', borderRadius: '6px' }}>
+      <h2>🔑 Sign Up / Sign In</h2>
 
       {!user && (
         <>
@@ -78,7 +76,7 @@ export default function AuthPanel() {
             onChange={(e) => setPassword(e.target.value)}
             style={{ display: 'block', marginBottom: '0.5rem' }}
           />
-          <button onClick={handleSignUp}>Sign Up</button>
+          <button onClick={handleSignUp}>Create Account</button>
           <button onClick={handleSignIn} style={{ marginLeft: '0.5rem' }}>
             Sign In
           </button>
@@ -94,5 +92,5 @@ export default function AuthPanel() {
 
       {message && <p style={{ marginTop: '1rem' }}>{message}</p>}
     </div>
-  );
+  )
 }
