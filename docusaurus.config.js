@@ -70,6 +70,8 @@ const config = {
           position: 'left',
           label: 'System',
         },
+        // Updated navbar for profile link
+        { to: '/profile', label: 'Profile', position: 'right' }, // Add Profile Link
         {
           href: 'https://github.com/doubleobud/buds_bunker',
           label: 'GitHub',
