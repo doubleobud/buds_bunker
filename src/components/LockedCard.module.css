@@ -1,0 +1,30 @@
+/* src/components/LockedCard.module.css */
+
+.lockedCard {
+    background-color: #1e1e1e;
+    border: 2px dashed #888;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+    color: #ccc;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .reason {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+  }
+  
+  .lockedIcon {
+    font-size: 1.5rem;
+    color: #999;
+  }
+  

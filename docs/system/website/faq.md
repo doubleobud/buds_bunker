@@ -46,7 +46,7 @@ Both—and neither.
 ### ❓ What’s the best place to start?
 
 Start here:  
-👉 [`🧭 Start Here`](/docs/start-here)
+👉 [`🧭 Start Here`](/start-here)
 
 Then follow:  
 👉 [`📖 Narrative Timeline`](/docs/chronological-narrative)

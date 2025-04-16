@@ -7,11 +7,7 @@ const sidebars = {
       label: 'Overview',
       collapsible: false,
       items: [
-        {
-          type: 'doc',
-          id: 'start-here',
-          label: '🧭 Start Here',
-        },
+        // Removed: Start Here — now lives in /src/pages, not /docs
         {
           type: 'doc',
           id: 'chronological-narrative',
