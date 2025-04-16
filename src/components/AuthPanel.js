@@ -34,7 +34,7 @@ export default function AuthPanel() {
       try {
         await createCharacterIfNotExists()
         setMessage('✅ Character ready! Redirecting...')
-        setTimeout(() => history.push(`${BASE_URL}/profile`), 2000)
+        setTimeout(() => history.push(`${BASE_URL}/profile`), 3000)
       } catch (charErr) {
         console.error(charErr)
         setMessage('❌ Character creation failed. Please try again or contact support.')

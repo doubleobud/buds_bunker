@@ -1,71 +1,205 @@
 @import 'shepherd.js/dist/css/shepherd.css';
 
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* 🌞 LIGHT MODE: Grounded, muted, readable */
+/* -------------------------------------------------- */
+/* 🌞 LIGHT MODE PALETTE */
+/* -------------------------------------------------- */
 :root {
-  /* Primary green system */
-  --ifm-color-primary: #31544c;
-  --ifm-color-primary-dark: #2a483f;
-  --ifm-color-primary-darker: #243e36;
-  --ifm-color-primary-darkest: #1c2f2a;
-  --ifm-color-primary-light: #3c665c;
-  --ifm-color-primary-lighter: #447469;
-  --ifm-color-primary-lightest: #50897d;
+  --ifm-color-primary:           #31544c;
+  --ifm-color-primary-lightest:  #50897d;
 
-  /* Library-inspired base colors */
-  --ifm-background-color: #e6e0d2;              /* Light parchment beige */
-  --ifm-font-color-base: #2b2b1f;               /* Dark ink / sepia */
-  --ifm-heading-color: #1e1e1e;                 /* Bold black-ink tone */
+  --ifm-background-color:        #e6e0d2;  /* parchment */
+  --ifm-font-color-base:         #2b2b1f;
+  --ifm-heading-color:           #1e1e1e;
 
-  /* Accents */
-  --ifm-color-info: #607d8b;                    /* Muted slate blue */
-  --ifm-color-success: #4e705f;                 /* Moss green */
-  --ifm-color-warning: #caa76a;                 /* Brass/tan */
-  --ifm-color-danger: #904c3e;                  /* Burnt sienna */
+  --ifm-color-info:              #607d8b;
+  --ifm-color-success:           #4e705f;
+  --ifm-color-warning:           #caa76a;
+  --ifm-color-danger:            #904c3e;
 
-  /* Navbar (banner) styling */
-  --ifm-navbar-background-color: #a3967f;       /* Richer, darker parchment for contrast */
-  --ifm-navbar-link-color: #1e1e1e;
-  --ifm-navbar-link-hover-color: #31544c;
-  --ifm-navbar-shadow: inset 0 -1px 0 #c3b79d;  /* subtle bottom border */
-
-  /* Code + UI */
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(50, 50, 50, 0.05);
+  --ifm-navbar-background-color: #a3967f;
+  --ifm-navbar-shadow:           inset 0 -1px 0 #c3b79d;
 }
 
-/* 🌚 DARK MODE: Soothing, high contrast, futuristic */
+/* -------------------------------------------------- */
+/* 🌚 DARK MODE PALETTE */
+/* -------------------------------------------------- */
 [data-theme='dark'] {
-  /* Brighter teals for energy and clarity */
-  --ifm-color-primary: #4fd1b8;
-  --ifm-color-primary-dark: #3ab9a1;
-  --ifm-color-primary-darker: #33a08d;
-  --ifm-color-primary-darkest: #2b8576;
-  --ifm-color-primary-light: #64d7bf;
-  --ifm-color-primary-lighter: #80dfcb;
-  --ifm-color-primary-lightest: #a2ede0;
+  --ifm-color-primary:           #4fd1b8;
+  --ifm-background-color:        #121917;
+  --ifm-font-color-base:         #e2f3ef;
+  --ifm-heading-color:           #c1f0e7;
+  --ifm-color-success:           #6bc2b2;
+  --ifm-color-danger:            #e26f64;
+  --ifm-navbar-background-color: #080d0c;
+  --ifm-navbar-shadow:           inset 0 -1px 0 #1e2a27;
+}
 
-  /* Base + type */
-  --ifm-background-color: #121917;
-  --ifm-font-color-base: #e2f3ef;
-  --ifm-heading-color: #c1f0e7;
+/* -------------------------------------------------- */
+/* 🌐 GLOBAL ELEMENT TWEAKS */
+/* -------------------------------------------------- */
+.button,
+.btn {
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+}
 
-  /* Accents */
-  --ifm-color-info: #80c0ce;
-  --ifm-color-success: #6bc2b2;
-  --ifm-color-warning: #e0aa4f;
-  --ifm-color-danger: #e26f64;
+.input {
+  padding: 0.45rem 0.75rem;
+  font-size: 0.95rem;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
+}
 
-  /* Navbar (banner) styling */
-  --ifm-navbar-background-color: #080d0c;       /* Even deeper black for richer contrast */
-  --ifm-navbar-link-color: #d3f6ef;
-  --ifm-navbar-link-hover-color: #4fd1b8;
-  --ifm-navbar-shadow: inset 0 -1px 0 #1e2a27;  /* subtle shadow divider */
+/* -------------------------------------------------- */
+/* ✅ MESSAGING BLOCKS */
+/* -------------------------------------------------- */
+.success-message {
+  background-color: #f0f9f5;
+  color:            #2f6659;
+  border-left:      4px solid #4e705f;
+  padding:          0.5rem 1rem;
+  border-radius:    0.375rem;
+  font-size:        0.9rem;
+}
 
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+.error-message {
+  background-color: #fff0ee;
+  color:            #904c3e;
+  border-left:      4px solid #904c3e;
+  padding:          0.5rem 1rem;
+  border-radius:    0.375rem;
+  font-size:        0.9rem;
+}
+
+/* -------------------------------------------------- */
+/* 🔩 BUNKER IMAGE STYLING */
+/* -------------------------------------------------- */
+.bunker-image {
+  max-width: 100%;
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto 2rem;
+  display: block;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  filter: brightness(1.15) contrast(1.1);
+}
+
+[data-theme='dark'] .bunker-image {
+  filter: brightness(1.35) contrast(1.2);
+}
+
+/* -------------------------------------------------- */
+/* 🧮 BUNKER CHARACTER STATS DISPLAY */
+/* -------------------------------------------------- */
+.bunker-stats {
+  background-color: #202225;
+  color: #e1e1e1;
+  font-family: monospace;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  width: fit-content;
+  box-shadow: inset 0 0 0 1px #444;
+}
+
+[data-theme='dark'] .bunker-stats {
+  background-color: #2b2f31;
+  color: #d9f0ec;
+  box-shadow: inset 0 0 0 1px #555;
+}
+
+/* -------------------------------------------------- */
+/* 🎮 BUNKER INTERACTION BUTTONS */
+/* -------------------------------------------------- */
+.bunker-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  font-size: 1.1rem;
+  padding: 0.85rem 1.8rem;
+  background-color: #4d5a6f;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+
+  box-shadow:
+    0 0 0 1px #3a475b inset,
+    0 6px 18px rgba(0, 0, 0, 0.4),
+    0 0 12px rgba(79, 209, 184, 0.1);
+  transition: all 0.2s ease, transform 0.15s ease;
+}
+
+.bunker-button:hover {
+  background-color: #5f6e86;
+  transform: scale(1.035);
+  box-shadow:
+    0 0 0 1px #4fd1b8 inset,
+    0 8px 20px rgba(0, 0, 0, 0.5),
+    0 0 18px rgba(79, 209, 184, 0.25);
+}
+
+.bunker-button:hover::before {
+  content: '🛠️';
+  animation: wiggle 0.4s ease;
+  margin-right: 0.4rem;
+}
+
+.bunker-button > span {
+  display: inline-block;
+}
+
+@keyframes wiggle {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-15deg); }
+  50%  { transform: rotate(10deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* -------------------------------------------------- */
+/* 🧯 REMOVE TOC ON START HERE PAGE ONLY */
+/* -------------------------------------------------- */
+.start-here-page .theme-doc-toc-desktop,
+.start-here-page .theme-doc-toc-mobile {
+  display: none !important;
+}
+
+.start-here-page .main-wrapper {
+  grid-template-columns: 1fr !important; /* collapse right panel spacing */
+}
+
+/* -------------------------------------------------- */
+/* 📏 ALIGN CONTENT TO CENTER ON START-HERE PAGE */
+/* -------------------------------------------------- */
+.start-here-page .col.col--8 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.start-here-page .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------- */
+/* 🛑 NAVBAR SUPPRESSION + HERO PADDING (HOMEPAGE ONLY) */
+/* -------------------------------------------------- */
+
+/* ✅ Hide the navbar when data-navbar is false */
+html[data-navbar='false'] nav.navbar {
+  display: none !important;
+}
+
+/* ✅ Apply top padding only when navbar is hidden */
+html[data-navbar='false'] .hero {
+  padding-top: 2.5rem;
 }

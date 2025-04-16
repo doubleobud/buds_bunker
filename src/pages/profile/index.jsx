@@ -1,135 +1,243 @@
-import React, { useEffect, useState } from 'react'
-import Layout from '@theme/Layout'
-import { supabase } from '@site/src/services/supabaseClient'
-import { getCharacterForUser, updateCharacter } from '@site/src/services/character'
-import Spinner from '@site/src/components/Spinner'
-import TourGuide from '@site/src/components/TourGuide'
+import React, {useEffect, useState} from 'react';
+import Layout from '@theme/Layout';
+import {supabase} from '@site/src/services/supabaseClient';
+import {
+  getCharacterForUser,
+  updateCharacter,
+} from '@site/src/services/character';
+import Spinner   from '@site/src/components/Spinner';
+import TourGuide from '@site/src/components/TourGuide';
 
-export default function ProfilePage() {
-  const [session, setSession] = useState(null)
-  const [character, setCharacter] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-  const [tourReady, setTourReady] = useState(false)
+/* ───────── helpers ───────── */
+const generateRandomID = () =>
+  String(Math.floor(100000 + Math.random() * 900000));
 
-  // Load Supabase auth session
+export default function IdentityCenter() {
+  /* ── state ──────────────────────────────────────────── */
+  const [session,   setSession]   = useState(null);
+  const [character, setCharacter] = useState(null);
+  const [loading,   setLoading]   = useState(true);
+  const [error,     setError]     = useState(null);
+
+  const [customId,            setCustomId]            = useState('');
+  const [availabilityMessage, setAvailabilityMessage] = useState('');
+  const [isAvailable,         setIsAvailable]         = useState(null);
+
+  const [tourReady, setTourReady] = useState(false);
+
+  /* ── auth session ───────────────────────────────────── */
   useEffect(() => {
-    const fetchSession = async () => {
-      const { data } = await supabase.auth.getSession()
-      if (data?.session) setSession(data.session)
-    }
+    const load = async () => {
+      const {data} = await supabase.auth.getSession();
+      if (data?.session) setSession(data.session);
+    };
+    load();
 
-    fetchSession()
+    const {data: listener} = supabase.auth.onAuthStateChange(
+      (_e, newSession) => setSession(newSession),
+    );
+    return () => listener.subscription.unsubscribe();
+  }, []);
 
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session)
-    })
-    return () => listener.subscription.unsubscribe()
-  }, [])
-
-  // Load character data
+  /* ── character load / create ────────────────────────── */
   useEffect(() => {
-    if (!session) return
-
-    ;(async () => {
+    if (!session) return;
+    (async () => {
       try {
-        const data = await getCharacterForUser()
-        if (!data) throw new Error('No character found for user')
-        setCharacter(data)
+        const data = await getCharacterForUser();
+        if (!data) throw new Error('No character found for user');
+
+        if (!data.user_id_number) {
+          const newId = generateRandomID();
+          await updateCharacter({user_id_number: newId});
+          data.user_id_number = newId;
+        }
+
+        setCharacter(data);
+        setCustomId(data.user_id_number);
       } catch (err) {
-        setError(err.message)
+        setError(err.message);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    })()
-  }, [session])
+    })();
+  }, [session]);
 
-  // After all data is ready, allow tour to be shown
+  /* ── start tour when ready ──────────────────────────── */
   useEffect(() => {
-    if (!loading && !error && character) {
-      setTimeout(() => setTourReady(true), 800)
-    }
-  }, [loading, error, character])
+    if (!loading && !error && character) setTourReady(true);
+  }, [loading, error, character]);
 
+  /* ── shepherd steps (unchanged) ─────────────────────── */
   const tourSteps = [
     {
-      selector: '[data-tour="display-name"]',
-      content: '🧑 This is your public display name. You can change it here.',
+      attachTo: {element: '[data-tour="id-number"]', on: 'right'},
+      title: 'ID Number',
+      text: [
+        'This 6‑digit ID is auto‑generated.',
+        'You can replace it with any unused number.',
+      ],
+      classes: 'shepherd-theme-arrows',
+      scrollTo: true,
     },
     {
-      selector: '[data-tour="stats"]',
-      content: '📊 These are your character’s current stats.',
+      attachTo: {element: '[data-tour="stats-message"]', on: 'bottom'},
+      title: 'Character Attributes',
+      text: ['Attributes you acquire will appear here once you start progressing.'],
+      classes: 'shepherd-theme-arrows',
+      scrollTo: true,
     },
     {
-      selector: '[data-tour="sign-out"]',
-      content: '🚪 Use this button to sign out when finished.',
+      attachTo: {element: '[data-tour="continue-narrative"]', on: 'bottom'},
+      title: 'Continue Narrative',
+      text: ['Click to jump into the next chapter of the story.'],
+      classes: 'shepherd-theme-arrows',
+      scrollTo: true,
     },
-  ]
+    {
+      attachTo: {element: '[data-tour="show-tour"]', on: 'bottom'},
+      title: 'Show Tour Again',
+      text: ['Replay this tutorial any time.'],
+      classes: 'shepherd-theme-arrows',
+      scrollTo: true,
+    },
+  ];
 
+  /* ── handlers ───────────────────────────────────────── */
+  const handleCheckAvailability = async () => {
+    const valid = /^[0-9]{6}$/.test(customId);
+    if (!valid) {
+      setIsAvailable(false);
+      setAvailabilityMessage('Enter a valid 6‑digit number.');
+      return;
+    }
+
+    const {data, error} = await supabase
+      .from('characters')
+      .select('id')
+      .eq('user_id_number', customId);
+
+    if (error) {
+      setIsAvailable(false);
+      setAvailabilityMessage('Error checking availability.');
+      return;
+    }
+
+    const taken = data.some(row => row.id !== character.id);
+    setIsAvailable(!taken);
+    setAvailabilityMessage(
+      taken ? 'Number already in use.' : 'Number is available!',
+    );
+  };
+
+  const handleSaveCustomId = async () => {
+    if (!isAvailable) return;
+    try {
+      await updateCharacter({user_id_number: customId});
+      setCharacter(c => ({...c, user_id_number: customId}));
+      setAvailabilityMessage('ID saved.');
+    } catch {
+      setAvailabilityMessage('Save failed, try again.');
+    }
+  };
+
+  /* ── early exits ────────────────────────────────────── */
   if (!session)
     return (
-      <Layout title="Profile">
-        <p>You need to sign in first.</p>
+      <Layout title="Identity Center">
+        <p className="text-center mt-10">⚠️ Please sign in first.</p>
       </Layout>
-    )
+    );
 
   if (loading)
     return (
-      <Layout title="Profile">
-        <Spinner />
+      <Layout title="Identity Center">
+        <div className="flex justify-center mt-10">
+          <Spinner />
+        </div>
       </Layout>
-    )
+    );
 
   if (error)
     return (
-      <Layout title="Profile">
-        <p>Error: {error}</p>
+      <Layout title="Identity Center">
+        <p className="text-center text-red-600 mt-10">Error: {error}</p>
       </Layout>
-    )
+    );
 
+  /* ── render ─────────────────────────────────────────── */
   return (
-    <Layout title="Profile">
+    <Layout title="Identity Center">
       {tourReady && <TourGuide steps={tourSteps} />}
 
-      <section className="max-w-2xl mx-auto p-4">
-        <h1 className="text-3xl font-bold mb-4">Account</h1>
-        <div className="border p-4 rounded-lg mb-6">
-          <p>Email: {session.user.email}</p>
-          <button
-            className="btn btn-secondary mt-2"
-            data-tour="sign-out"
-            onClick={() => supabase.auth.signOut()}
-          >
-            Sign Out
-          </button>
-        </div>
+      {/* action bar (buttons injected by TourGuide) */}
+      <div className="bg-gray-100 border-b border-gray-300 py-2 px-4 flex gap-2" />
 
-        <h2 className="text-2xl font-bold mb-4">Character</h2>
-        <div className="border p-4 rounded-lg">
-          <label className="block font-semibold mb-1">Display Name</label>
-          <input
-            data-tour="display-name"
-            className="input mb-3"
-            value={character.display_name || ''}
-            onChange={(e) =>
-              setCharacter({ ...character, display_name: e.target.value })
-            }
-            onBlur={async () => {
-              await updateCharacter({
-                display_name: character.display_name,
-              })
-            }}
-          />
+      {/* main content */}
+      <main className="max-w-3xl mx-auto px-4 py-10 space-y-10">
 
-          <label className="block font-semibold mb-1">Stats</label>
-          <pre
-            data-tour="stats"
-            className="bg-gray-900 text-green-300 p-3 rounded"
+        <h1 className="text-4xl font-extrabold tracking-tight">
+          User Profile
+        </h1>
+
+        {/* ── ID Number card ───────────────────────────── */}
+        <section
+          className="bg-[#fdfcf5] border border-gray-200 shadow-md rounded-xl p-6 space-y-4"
+          data-tour="id-number"
+        >
+          <h2 className="text-xl font-semibold border-b pb-2">
+            Your ID Number
+          </h2>
+
+          <div className="flex flex-wrap gap-2 items-center">
+            <input
+              className="input flex-grow min-w-[140px]"
+              value={customId}
+              onChange={e => setCustomId(e.target.value)}
+              placeholder="6‑digit number"
+            />
+            <button className="btn btn-info" onClick={handleCheckAvailability}>
+              Check
+            </button>
+            <button
+              className="btn btn-primary disabled:opacity-50"
+              disabled={!isAvailable}
+              onClick={handleSaveCustomId}
+            >
+              Save ID
+            </button>
+          </div>
+
+          {availabilityMessage && (
+            <p
+              className={
+                isAvailable ? 'success-message' : 'error-message'
+              }
+            >
+              {availabilityMessage}
+            </p>
+          )}
+        </section>
+
+        {/* ── Stats card ──────────────────────────────── */}
+        <section className="bg-[#fdfcf5] border border-gray-200 shadow-md rounded-xl p-6">
+          <h2 className="text-xl font-semibold border-b pb-2">
+            Character Stats
+          </h2>
+
+          <p
+            className="italic text-gray-600"
+            data-tour="stats-message"
           >
-            {JSON.stringify(character.stats, null, 2)}
-          </pre>
-        </div>
-      </section>
+            You haven’t earned any stats yet. Keep progressing to unlock them.
+          </p>
+
+          {/* original table kept for later use */}
+          {/*
+          <div data-tour="stats">…</div>
+          */}
+        </section>
+      </main>
     </Layout>
-  )
+  );
 }

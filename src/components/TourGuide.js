@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import Shepherd from 'shepherd.js'
 import 'shepherd.js/dist/css/shepherd.css'
+import { useHistory } from '@docusaurus/router'
+import useBaseUrl from '@docusaurus/useBaseUrl'
 
-const TourGuide = () => {
+const TourGuide = ({ steps }) => {
   const [tour, setTour] = useState(null)
+  const history = useHistory()
+  // Updated baseUrl: point to /docs/chronological-narrative
+  const baseUrl = useBaseUrl('/docs/chronological-narrative')
 
   useEffect(() => {
+    if (!steps || steps.length === 0) return
+
     const shepherd = new Shepherd.Tour({
       defaultStepOptions: {
         cancelIcon: { enabled: true },
@@ -15,48 +22,11 @@ const TourGuide = () => {
       useModalOverlay: true,
     })
 
-    shepherd.addStep({
-      id: 'display-name',
-      text: 'This is your public display name. You can change it here.',
-      attachTo: { element: '[data-tour="display-name"]', on: 'bottom' },
-      buttons: [
-        {
-          text: 'Next',
-          action: shepherd.next,
-        },
-      ],
-    })
-
-    shepherd.addStep({
-      id: 'stats',
-      text: 'Here you can monitor your character’s stats.',
-      attachTo: { element: '[data-tour="stats"]', on: 'top' },
-      buttons: [
-        {
-          text: 'Back',
-          action: shepherd.back,
-        },
-        {
-          text: 'Next',
-          action: shepherd.next,
-        },
-      ],
-    })
-
-    shepherd.addStep({
-      id: 'sign-out',
-      text: 'Use this button to sign out.',
-      attachTo: { element: '[data-tour="sign-out"]', on: 'bottom' },
-      buttons: [
-        {
-          text: 'Back',
-          action: shepherd.back,
-        },
-        {
-          text: 'Done',
-          action: shepherd.complete,
-        },
-      ],
+    steps.forEach((step, index) => {
+      shepherd.addStep({
+        ...step,
+        buttons: getStepButtons(shepherd, index, steps.length),
+      })
     })
 
     setTour(shepherd)
@@ -65,15 +35,53 @@ const TourGuide = () => {
       shepherd.start()
       localStorage.setItem('tour-profile-seen', 'true')
     }
-  }, [])
+
+    return () => {
+      shepherd.cancel()
+    }
+  }, [steps])
+
+  const getStepButtons = (shepherd, index, total) => {
+    const buttons = []
+    if (index > 0) {
+      buttons.push({ text: 'Back', action: shepherd.back })
+    }
+    if (index < total - 1) {
+      buttons.push({ text: 'Next', action: shepherd.next })
+    } else {
+      buttons.push({ text: 'Done', action: shepherd.complete })
+    }
+    return buttons
+  }
 
   const handleRestart = () => {
-    if (tour) tour.start()
+    if (tour) {
+      localStorage.removeItem('tour-profile-seen')
+      tour.start()
+    }
+  }
+
+  // Use window.location.href for navigation with a proper base URL.
+  const handleContinue = () => {
+    window.location.href = baseUrl
   }
 
   return (
-    <div className="text-right mb-4">
-      <button onClick={handleRestart} className="btn btn-outline">
+    <div className="text-right mb-4 flex items-center justify-end space-x-2">
+      <button
+        data-tour="continue-narrative"
+        className="btn btn-outline"
+        onClick={handleContinue}
+        type="button"
+      >
+        📘 Continue Narrative
+      </button>
+      <button
+        data-tour="show-tour"
+        onClick={handleRestart}
+        className="btn btn-outline"
+        type="button"
+      >
         📘 Show Tour Again
       </button>
     </div>
