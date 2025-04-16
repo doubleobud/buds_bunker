@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
+    "sync-timeline": "node scripts/syncTimelineData.js",
+    "start": "npm run sync-timeline && docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -20,6 +21,7 @@
     "@supabase/supabase-js": "^2.49.4",
     "clsx": "^2.0.0",
     "dotenv": "^16.4.7",
+    "gray-matter": "^4.0.3",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

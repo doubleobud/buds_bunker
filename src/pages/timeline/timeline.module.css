@@ -1,0 +1,104 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .header {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #31544c;
+  }
+  
+  .intro {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .timelineCard {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .fadeIn {
+    animation: fadeInUp 0.6s forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .timestamp {
+    font-size: 0.9rem;
+    color: #888;
+    width: 80px;
+    flex-shrink: 0;
+    text-align: right;
+    margin-right: 1rem;
+  }
+  
+  .content {
+    text-align: left;
+    flex: 1;
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #31544c;
+  }
+  
+  .description {
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  
+  .tags {
+    margin-top: 0.5rem;
+  }
+  
+  .tag {
+    background: #e0e0e0;
+    color: #555;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+  }
+  
+  .ctaContainer {
+    margin-top: 3rem;
+  }
+  
+  .ctaButton {
+    font-size: 1.1rem;
+    padding: 0.75rem 2rem;
+    background: #31544c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .ctaButton:hover {
+    background: #254338;
+  }
+  

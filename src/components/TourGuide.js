@@ -8,7 +8,7 @@ const TourGuide = ({ steps }) => {
   const [tour, setTour] = useState(null)
   const history = useHistory()
   // Updated baseUrl: point to /docs/chronological-narrative
-  const baseUrl = useBaseUrl('/docs/chronological-narrative')
+  const baseUrl = useBaseUrl('/timeline/origin')
 
   useEffect(() => {
     if (!steps || steps.length === 0) return
