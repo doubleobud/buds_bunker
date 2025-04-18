@@ -1,11 +1,13 @@
+// src/services/supabaseClient.js
 import { createClient } from '@supabase/supabase-js';
-import siteConfig from '@generated/docusaurus.config';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-const supabaseUrl = siteConfig.customFields.SUPABASE_URL;
-const supabaseKey = siteConfig.customFields.SUPABASE_ANON_KEY;
+const { siteConfig } = useDocusaurusContext();
+const supabaseUrl = siteConfig.customFields.supabaseUrl;
+const supabaseKey = siteConfig.customFields.supabaseAnonKey;
 
 if (!supabaseUrl || !supabaseKey) {
-  throw new Error('Supabase keys are missing from customFields.');
+  throw new Error('Supabase environment variables are not defined.');
 }
 
 export const supabase = createClient(supabaseUrl, supabaseKey);

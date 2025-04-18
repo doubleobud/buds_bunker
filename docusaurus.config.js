@@ -1,5 +1,5 @@
 // @ts-check
-require('dotenv').config();
+require('dotenv').config(); // ✅ Load .env for SUPABASE_ vars
 
 const path = require('path');
 const { themes: prismThemes } = require('prism-react-renderer');
@@ -86,11 +86,9 @@ const config = {
   },
 
   customFields: {
-    SUPABASE_URL: process.env.REACT_APP_SUPABASE_URL,
-    SUPABASE_ANON_KEY: process.env.REACT_APP_SUPABASE_ANON_KEY,
+    supabaseUrl: process.env.REACT_APP_SUPABASE_URL,
+    supabaseAnonKey: process.env.REACT_APP_SUPABASE_ANON_KEY,
   },
-
-  plugins: [require.resolve('./plugins/webpack-dotenv')],
 };
 
 module.exports = config;
