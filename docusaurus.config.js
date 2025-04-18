@@ -1,4 +1,5 @@
 // @ts-check
+require('dotenv').config();
 
 const path = require('path');
 const { themes: prismThemes } = require('prism-react-renderer');
@@ -70,8 +71,7 @@ const config = {
           position: 'left',
           label: 'System',
         },
-        // Updated navbar for profile link
-        { to: '/profile', label: 'Profile', position: 'right' }, // Add Profile Link
+        { to: '/profile', label: 'Profile', position: 'right' },
         {
           href: 'https://github.com/doubleobud/buds_bunker',
           label: 'GitHub',
@@ -83,6 +83,11 @@ const config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+  },
+
+  customFields: {
+    SUPABASE_URL: process.env.REACT_APP_SUPABASE_URL,
+    SUPABASE_ANON_KEY: process.env.REACT_APP_SUPABASE_ANON_KEY,
   },
 
   plugins: [require.resolve('./plugins/webpack-dotenv')],
