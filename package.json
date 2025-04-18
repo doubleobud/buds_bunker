@@ -22,7 +22,6 @@
     "@mdx-js/react": "^3.0.0",
     "@supabase/supabase-js": "^2.49.4",
     "clsx": "^2.0.0",
-    "dotenv": "^16.4.7",
     "gray-matter": "^4.0.3",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
@@ -32,10 +31,15 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.7.0",
     "@docusaurus/types": "3.7.0",
+    "dotenv": "^16.5.0",
     "dotenv-webpack": "^8.1.0"
   },
   "browserslist": {
-    "production": [">0.5%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 3 chrome version",
       "last 3 firefox version",

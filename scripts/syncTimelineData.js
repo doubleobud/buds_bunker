@@ -1,10 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
+const dotenv = require('dotenv');
+
+dotenv.config(); // ✅ Load environment variables from .env
 
 // Path to timeline markdown entries
 const entriesDir = path.join(__dirname, '../src/pages/timeline');
-// Path to output generated JSON data
 const outputDir = path.join(__dirname, '../src/data/timeline');
 
 // Make sure output directory exists
