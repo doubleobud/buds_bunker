@@ -3,16 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "docusaurus": "docusaurus",
-    "sync-timeline": "node scripts/syncTimelineData.js",
-    "start": "npm run sync-timeline && docusaurus start",
+    "start": "docusaurus start",
+    "prestart": "npm run sync-timeline",
     "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
+    "prebuild": "npm run sync-timeline",
     "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
+    "predeploy": "npm run sync-timeline",
     "serve": "docusaurus serve",
+    "clear": "docusaurus clear",
+    "swizzle": "docusaurus swizzle",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "sync-timeline": "node scripts/syncTimelineData.js"
   },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
@@ -33,11 +35,7 @@
     "dotenv-webpack": "^8.1.0"
   },
   "browserslist": {
-    "production": [
-      ">0.5%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.5%", "not dead", "not op_mini all"],
     "development": [
       "last 3 chrome version",
       "last 3 firefox version",
