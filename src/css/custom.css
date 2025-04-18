@@ -52,25 +52,31 @@
   border: 1px solid #ccc;
 }
 
+.input:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 1px var(--ifm-color-primary);
+}
+
 /* -------------------------------------------------- */
 /* ✅ MESSAGING BLOCKS */
 /* -------------------------------------------------- */
 .success-message {
   background-color: #f0f9f5;
-  color:            #2f6659;
-  border-left:      4px solid #4e705f;
-  padding:          0.5rem 1rem;
-  border-radius:    0.375rem;
-  font-size:        0.9rem;
+  color: #2f6659;
+  border-left: 4px solid #4e705f;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.9rem;
 }
 
 .error-message {
   background-color: #fff0ee;
-  color:            #904c3e;
-  border-left:      4px solid #904c3e;
-  padding:          0.5rem 1rem;
-  border-radius:    0.375rem;
-  font-size:        0.9rem;
+  color: #904c3e;
+  border-left: 4px solid #904c3e;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.9rem;
 }
 
 /* -------------------------------------------------- */
@@ -130,6 +136,7 @@
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
+  cursor: pointer;
 
   box-shadow:
     0 0 0 1px #3a475b inset,
@@ -174,12 +181,9 @@
 }
 
 .start-here-page .main-wrapper {
-  grid-template-columns: 1fr !important; /* collapse right panel spacing */
+  grid-template-columns: 1fr !important;
 }
 
-/* -------------------------------------------------- */
-/* 📏 ALIGN CONTENT TO CENTER ON START-HERE PAGE */
-/* -------------------------------------------------- */
 .start-here-page .col.col--8 {
   flex: 0 0 100%;
   max-width: 100%;
@@ -191,15 +195,93 @@
 }
 
 /* -------------------------------------------------- */
-/* 🛑 NAVBAR SUPPRESSION + HERO PADDING (HOMEPAGE ONLY) */
+/* 🛑 NAVBAR SUPPRESSION + HERO PADDING */
 /* -------------------------------------------------- */
-
-/* ✅ Hide the navbar when data-navbar is false */
 html[data-navbar='false'] nav.navbar {
   display: none !important;
 }
 
-/* ✅ Apply top padding only when navbar is hidden */
 html[data-navbar='false'] .hero {
   padding-top: 2.5rem;
+}
+
+/* -------------------------------------------------- */
+/* 🌐 ORIGIN TIMELINE STYLING (Scoped) */
+/* -------------------------------------------------- */
+.origin-timeline .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.origin-timeline .header {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.origin-timeline .intro {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.origin-timeline .timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.origin-timeline .timelineCard {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.origin-timeline .fadeIn {
+  animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.origin-timeline .timestamp {
+  font-size: 1rem;
+  color: #888;
+  width: 60px;
+  flex-shrink: 0;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+.origin-timeline .content {
+  text-align: left;
+  flex: 1;
+}
+
+.origin-timeline .title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.origin-timeline .description {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.origin-timeline .date {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
 }
