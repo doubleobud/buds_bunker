@@ -1,94 +1,96 @@
-// @ts-check
-require('dotenv').config(); // ✅ Load .env for SUPABASE_ vars
+ // docusaurus.config.js
+-// @ts-check
+-require('dotenv').config();
++// @ts-check
++require('dotenv').config(); // only for local dev
 
-const path = require('path');
-const { themes: prismThemes } = require('prism-react-renderer');
+ const path = require('path');
+ const { themes: prismThemes } = require('prism-react-renderer');
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
-  title: "DoubleOBud's Bunker",
-  tagline: "A personal and game dev simulation hub",
-  favicon: 'img/favicon.ico',
+ /** @type {import('@docusaurus/types').Config} */
+ const config = {
+   title: "DoubleOBud's Bunker",
+   tagline: "A personal and game dev simulation hub",
+   favicon: 'img/favicon.ico',
 
-  url: 'https://doubleobud.github.io',
-  baseUrl: '/buds_bunker/',
-  organizationName: 'doubleobud',
-  projectName: 'buds_bunker',
-  trailingSlash: false,
+   url: 'https://doubleobud.github.io',
+   baseUrl: '/buds_bunker/',
+   organizationName: 'doubleobud',
+   projectName: 'buds_bunker',
+   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+   onBrokenLinks: 'throw',
+   onBrokenMarkdownLinks: 'warn',
 
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+   i18n: {
+     defaultLocale: 'en',
+     locales: ['en'],
+   },
 
-  presets: [
-    [
-      'classic',
-      {
-        docs: {
-          sidebarPath: path.resolve(__dirname, 'sidebars.js'),
-          editUrl: 'https://github.com/doubleobud/buds_bunker/tree/main/',
-        },
-        blog: {
-          path: 'logs/daily',
-          routeBasePath: 'logs',
-          blogSidebarTitle: 'Logs',
-          blogSidebarCount: 'ALL',
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-          },
-          editUrl: 'https://github.com/doubleobud/buds_bunker/tree/main/',
-        },
-        theme: {
-          customCss: path.resolve(__dirname, 'src/css/custom.css'),
-        },
-      },
-    ],
-  ],
+   presets: [
+     [
+       'classic',
+       {
+         docs: {
+           sidebarPath: path.resolve(__dirname, 'sidebars.js'),
+           editUrl: 'https://github.com/doubleobud/buds_bunker/tree/main/',
+         },
+         blog: {
+           path: 'logs/daily',
+           routeBasePath: 'logs',
+           blogSidebarTitle: 'Logs',
+           blogSidebarCount: 'ALL',
+           showReadingTime: true,
+           feedOptions: {
+             type: ['rss', 'atom'],
+           },
+           editUrl: 'https://github.com/doubleobud/buds_bunker/tree/main/',
+         },
+         theme: {
+           customCss: path.resolve(__dirname, 'src/css/custom.css'),
+         },
+       },
+     ],
+   ],
 
-  themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
-    navbar: {
-      logo: {
-        alt: 'DoubleOBud Logo',
-        src: 'img/buds-bunker-header-logo.png',
-      },
-      items: [
-        { to: '/logs', label: 'Logs', position: 'left' },
-        {
-          type: 'docSidebar',
-          sidebarId: 'projectSidebar',
-          position: 'left',
-          label: 'Project',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'systemSidebar',
-          position: 'left',
-          label: 'System',
-        },
-        { to: '/profile', label: 'Profile', position: 'right' },
-        {
-          href: 'https://github.com/doubleobud/buds_bunker',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-    },
-  },
+   themeConfig: {
+     image: 'img/docusaurus-social-card.jpg',
+     navbar: {
+       logo: {
+         alt: 'DoubleOBud Logo',
+         src: 'img/buds-bunker-header-logo.png',
+       },
+       items: [
+         { to: '/logs', label: 'Logs', position: 'left' },
+         {
+           type: 'docSidebar',
+           sidebarId: 'projectSidebar',
+           position: 'left',
+           label: 'Project',
+         },
+         {
+           type: 'docSidebar',
+           sidebarId: 'systemSidebar',
+           position: 'left',
+           label: 'System',
+         },
+         { to: '/profile', label: 'Profile', position: 'right' },
+         {
+           href: 'https://github.com/doubleobud/buds_bunker',
+           label: 'GitHub',
+           position: 'right',
+         },
+       ],
+     },
+     prism: {
+       theme: prismThemes.github,
+       darkTheme: prismThemes.dracula,
+     },
+   },
 
-  customFields: {
-    supabaseUrl: process.env.REACT_APP_SUPABASE_URL,
-    supabaseAnonKey: process.env.REACT_APP_SUPABASE_ANON_KEY,
-  },
-};
+-  plugins: [require.resolve('./plugins/webpack-dotenv')],
++  // you can remove webpack-dotenv if it was only for Supabase
++  // plugins: [require.resolve('./plugins/webpack-dotenv')],
+ };
 
-module.exports = config;
+ module.exports = config;
