@@ -1,23 +1,15 @@
+// src/services/auth.js
 import { supabase } from './supabaseClient'
-import { LOCAL_BASE_URL } from '../config/constants'
+import { PROD_BASE_URL } from '../config/constants' // ✅ use correct URL
 
 export async function signUp(email, password) {
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
-    options: { emailRedirectTo: FINAL_REDIRECT_URL + '/email-confirm' }
+    options: {
+      emailRedirectTo: `${PROD_BASE_URL}/email-confirm`, // ✅ correct, fully resolved
+    },
   })
   if (error) throw error
-  return data            // { user, session }
-}
-
-export async function signIn(email, password) {
-  const { data, error } = await supabase.auth.signInWithPassword({ email, password })
-  if (error) throw error
-  return data            // { user, session }
-}
-
-export async function signOut() {
-  const { error } = await supabase.auth.signOut()
-  if (error) throw error
+  return data
 }

@@ -1,6 +1,7 @@
+// src/pages/auth-test.js
 import React from 'react';
 import NoNavbarLayout from '../components/NoNavbarLayout';
-import AuthPanel from '@site/src/components/AuthPanel';     // ✅ keep alias if you're using @site
+import AuthPanel from '../components/AuthPanel';       // ← use relative path; no @site alias
 
 export default function AuthTestPage() {
   return (
@@ -16,3 +17,4 @@ export default function AuthTestPage() {
     </NoNavbarLayout>
   );
 }
+  
