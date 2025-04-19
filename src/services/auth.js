@@ -5,7 +5,7 @@ export async function signUp(email, password) {
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
-    options: { emailRedirectTo: `${LOCAL_BASE_URL}/email-confirm` },
+    options: { emailRedirectTo: FINAL_REDIRECT_URL + '/email-confirm' }
   })
   if (error) throw error
   return data            // { user, session }
