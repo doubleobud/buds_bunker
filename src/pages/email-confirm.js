@@ -9,32 +9,27 @@ export default function EmailConfirmPage() {
 
   useEffect(() => {
     const processConfirmation = async () => {
-      // ✅ Extract access_token + refresh_token from URL hash
-      const { error: urlError } = await supabase.auth.getSessionFromUrl();
+      try {
+        // 🔁 New method for Supabase v2
+        const { error: confirmError } = await supabase.auth.exchangeCodeForSession();
 
-      if (urlError) {
-        setMessage('Email confirmation link is invalid or expired. Please sign in manually.');
+        if (confirmError) {
+          console.error('Exchange error:', confirmError.message);
+          setMessage('Email confirmation link is invalid or expired. Please sign in manually.');
+          setTimeout(() => history.push(`${BASE_URL}/auth-test`), 3000);
+          return;
+        }
+
+        // ✅ Successful, redirect to profile
+        setMessage('✅ Email confirmed! Redirecting to your profile...');
         setTimeout(() => {
-          history.push(`${BASE_URL}/auth-test`);
-        }, 3000);
-        return;
+          history.push(`${BASE_URL}/profile`);
+        }, 2000);
+      } catch (err) {
+        console.error('Unexpected error:', err.message);
+        setMessage('An unexpected error occurred during confirmation.');
+        setTimeout(() => history.push(`${BASE_URL}/auth-test`), 3000);
       }
-
-      // ✅ Now try to fetch the session user
-      const { data: { user }, error: userError } = await supabase.auth.getUser();
-
-      if (!user || userError) {
-        setMessage('Could not verify your session. Please log in manually.');
-        setTimeout(() => {
-          history.push(`${BASE_URL}/auth-test`);
-        }, 3000);
-        return;
-      }
-
-      setMessage('✅ Email confirmed! Redirecting to your profile...');
-      setTimeout(() => {
-        history.push(`${BASE_URL}/profile`);
-      }, 2000);
     };
 
     processConfirmation();
