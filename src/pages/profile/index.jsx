@@ -4,6 +4,7 @@ import { supabase } from '@site/src/services/supabaseClient';
 import {
   getCharacterForUser,
   updateCharacter,
+  createCharacterIfNotExists,
 } from '@site/src/services/character';
 import Spinner from '@site/src/components/Spinner';
 import TourGuide from '@site/src/components/TourGuide';
@@ -13,7 +14,6 @@ const generateRandomID = () =>
   String(Math.floor(100000 + Math.random() * 900000));
 
 export default function IdentityCenter() {
-  // 🧠 State
   const [session, setSession] = useState(null);
   const [character, setCharacter] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -24,7 +24,6 @@ export default function IdentityCenter() {
   const [tourReady, setTourReady] = useState(false);
   const { unlocks, loading: unlocksLoading } = usePlayer();
 
-  // 🔐 Load session
   useEffect(() => {
     const load = async () => {
       const { data } = await supabase.auth.getSession();
@@ -38,13 +37,17 @@ export default function IdentityCenter() {
     return () => listener.subscription.unsubscribe();
   }, []);
 
-  // 📡 Fetch character
   useEffect(() => {
     if (!session) return;
     (async () => {
       try {
-        const data = await getCharacterForUser();
-        if (!data) throw new Error('No character found for user');
+        let data = await getCharacterForUser();
+
+        if (!data) {
+          await createCharacterIfNotExists();
+          data = await getCharacterForUser();
+          if (!data) throw new Error('Failed to create character.');
+        }
 
         if (!data.user_id_number) {
           const newId = generateRandomID();
@@ -62,12 +65,10 @@ export default function IdentityCenter() {
     })();
   }, [session]);
 
-  // ✅ Ready to tour
   useEffect(() => {
     if (!loading && !error && character) setTourReady(true);
   }, [loading, error, character]);
 
-  // 🧭 Shepherd.js tour steps
   const tourSteps = [
     {
       attachTo: { element: '[data-tour="id-number"]', on: 'right' },
@@ -102,7 +103,6 @@ export default function IdentityCenter() {
     },
   ];
 
-  // 🔍 Check availability
   const handleCheckAvailability = async () => {
     const valid = /^[0-9]{6}$/.test(customId);
     if (!valid) {
@@ -129,7 +129,6 @@ export default function IdentityCenter() {
     );
   };
 
-  // 💾 Save chosen ID
   const handleSaveCustomId = async () => {
     if (!isAvailable) return;
     try {
@@ -141,7 +140,6 @@ export default function IdentityCenter() {
     }
   };
 
-  // 🔐 Not signed in
   if (!session)
     return (
       <Layout title="Identity Center">
@@ -149,7 +147,6 @@ export default function IdentityCenter() {
       </Layout>
     );
 
-  // ⌛ Still loading
   if (loading || unlocksLoading)
     return (
       <Layout title="Identity Center">
@@ -159,7 +156,6 @@ export default function IdentityCenter() {
       </Layout>
     );
 
-  // ❌ Error loading character
   if (error)
     return (
       <Layout title="Identity Center">
@@ -167,7 +163,6 @@ export default function IdentityCenter() {
       </Layout>
     );
 
-  // ✅ Main UI
   return (
     <Layout title="Identity Center">
       {tourReady && <TourGuide steps={tourSteps} />}
