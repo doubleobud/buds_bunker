@@ -6,7 +6,6 @@ export async function signUp(email, password) {
     email,
     password,
     options: {
-      // ✅ Redirect directly to /profile after email confirmation
       emailRedirectTo: `${FINAL_REDIRECT_URL}/profile`,
     },
   });

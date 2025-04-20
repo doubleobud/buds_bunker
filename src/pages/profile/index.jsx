@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import { supabase } from '@site/src/services/supabaseClient';
 import {
   getCharacterForUser,
@@ -24,13 +25,14 @@ export default function IdentityCenter() {
   const [tourReady, setTourReady] = useState(false);
   const { unlocks, loading: unlocksLoading } = usePlayer();
 
-  useEffect(() => {
-    const load = async () => {
-      const { data } = await supabase.auth.getSession();
-      if (data?.session) setSession(data.session);
-    };
-    load();
+  const continueUrl = useBaseUrl('/timeline/origin');
+  const devUrl = useBaseUrl('/profile/development');
 
+  useEffect(() => {
+    (async () => {
+      const { data } = await supabase.auth.getSession();
+      setSession(data?.session || null);
+    })();
     const { data: listener } = supabase.auth.onAuthStateChange(
       (_e, newSession) => setSession(newSession)
     );
@@ -42,19 +44,16 @@ export default function IdentityCenter() {
     (async () => {
       try {
         let data = await getCharacterForUser();
-
         if (!data) {
           await createCharacterIfNotExists();
           data = await getCharacterForUser();
           if (!data) throw new Error('Failed to create character.');
         }
-
         if (!data.user_id_number) {
           const newId = generateRandomID();
           await updateCharacter({ user_id_number: newId });
           data.user_id_number = newId;
         }
-
         setCharacter(data);
         setCustomId(data.user_id_number);
       } catch (err) {
@@ -65,45 +64,40 @@ export default function IdentityCenter() {
     })();
   }, [session]);
 
+  const steps = [
+    {
+      attachTo: { element: '[data-tour="action-bar"]', on: 'bottom' },
+      title: 'Profile Navigation',
+      text: ['Use these buttons to progress or replay the tour.'],
+    },
+    {
+      attachTo: { element: '[data-tour="id-number"]', on: 'right' },
+      title: 'Your ID Number',
+      text: ['This is your unique 6‑digit identifier.'],
+    },
+    {
+      attachTo: { element: '[data-tour="stats-message"]', on: 'bottom' },
+      title: 'Character Stats',
+      text: ['You’ll see stats here as you earn them.'],
+    },
+  ];
+
   useEffect(() => {
     if (!loading && !error && character) setTourReady(true);
   }, [loading, error, character]);
 
-  const tourSteps = [
-    {
-      attachTo: { element: '[data-tour="id-number"]', on: 'right' },
-      title: 'ID Number',
-      text: [
-        'This 6‑digit ID is auto‑generated.',
-        'You can replace it with any unused number.',
-      ],
-      classes: 'shepherd-theme-arrows',
-      scrollTo: true,
-    },
-    {
-      attachTo: { element: '[data-tour="stats-message"]', on: 'bottom' },
-      title: 'Character Attributes',
-      text: ['Attributes you acquire will appear here once you start progressing.'],
-      classes: 'shepherd-theme-arrows',
-      scrollTo: true,
-    },
-    {
-      attachTo: { element: '[data-tour="continue-narrative"]', on: 'bottom' },
-      title: 'Continue Narrative',
-      text: ['Click to jump into the next chapter of the story.'],
-      classes: 'shepherd-theme-arrows',
-      scrollTo: true,
-    },
-    {
-      attachTo: { element: '[data-tour="show-tour"]', on: 'bottom' },
-      title: 'Show Tour Again',
-      text: ['Replay this tutorial any time.'],
-      classes: 'shepherd-theme-arrows',
-      scrollTo: true,
-    },
-  ];
+  const handleContinue = () => {
+    window.location.href = continueUrl;
+  };
+  const handleDev = () => {
+    window.location.href = devUrl;
+  };
+  const handleRestart = () => {
+    localStorage.removeItem('tour-profile-seen');
+    window.profileTour?.start();
+  };
 
-  const handleCheckAvailability = async () => {
+  const checkNumber = async () => {
     const valid = /^[0-9]{6}$/.test(customId);
     if (!valid) {
       setIsAvailable(false);
@@ -129,11 +123,10 @@ export default function IdentityCenter() {
     );
   };
 
-  const handleSaveCustomId = async () => {
+  const saveNumber = async () => {
     if (!isAvailable) return;
     try {
       await updateCharacter({ user_id_number: customId });
-      setCharacter((c) => ({ ...c, user_id_number: customId }));
       setAvailabilityMessage('ID saved.');
     } catch {
       setAvailabilityMessage('Save failed, try again.');
@@ -165,8 +158,25 @@ export default function IdentityCenter() {
 
   return (
     <Layout title="Identity Center">
-      {tourReady && <TourGuide steps={tourSteps} />}
+      {tourReady && <TourGuide steps={steps} />}
+
       <main className="max-w-3xl mx-auto px-6 pt-12 pb-20 space-y-12">
+        {/* ── Blue‑box Action Bar ── */}
+        <div
+          className="text-right mb-4 flex items-center justify-end space-x-2"
+          data-tour="action-bar"
+        >
+          <button className="btn btn-outline" onClick={handleContinue}>
+            📘 Continue Narrative
+          </button>
+          <button className="btn btn-outline" onClick={handleDev}>
+            📘 Go to Character Development
+          </button>
+          <button className="btn btn-outline" onClick={handleRestart}>
+            📘 Show Tour Again
+          </button>
+        </div>
+
         <h1 className="text-4xl font-extrabold tracking-tight">User Profile</h1>
 
         {/* ── ID Number ── */}
@@ -175,26 +185,24 @@ export default function IdentityCenter() {
           data-tour="id-number"
         >
           <h2 className="text-xl font-semibold border-b pb-2">Your ID Number</h2>
-
           <div className="flex flex-wrap gap-2 items-center">
             <input
               className="input flex-grow min-w-[140px]"
               value={customId}
               onChange={(e) => setCustomId(e.target.value)}
-              placeholder="6-digit number"
+              placeholder="6‑digit number"
             />
-            <button className="btn btn-info" onClick={handleCheckAvailability}>
+            <button className="btn btn-info" onClick={checkNumber}>
               Check
             </button>
             <button
               className="btn btn-primary disabled:opacity-50"
               disabled={!isAvailable}
-              onClick={handleSaveCustomId}
+              onClick={saveNumber}
             >
               Save ID
             </button>
           </div>
-
           {availabilityMessage && (
             <p className={isAvailable ? 'success-message' : 'error-message'}>
               {availabilityMessage}
@@ -202,13 +210,17 @@ export default function IdentityCenter() {
           )}
         </section>
 
-        {/* ── Stats ── */}
+        {/* ── Character Stats ── */}
         <section className="bg-[#fdfcf5] border border-gray-200 shadow-md rounded-xl p-6">
           <h2 className="text-xl font-semibold border-b pb-2">Character Stats</h2>
-
-          {unlocks?.profile_extended ? (
-            <div data-tour="stats">
-              <p className="text-gray-700">[Stats table coming soon]</p>
+          {unlocks?.profile_extended && character?.stats ? (
+            <div data-tour="stats-message" className="space-y-2 text-gray-700">
+              {Object.entries(character.stats).map(([key, value]) => (
+                <div key={key} className="flex justify-between border-b py-1">
+                  <span className="capitalize">{key}</span>
+                  <span className="font-semibold">{value}</span>
+                </div>
+              ))}
             </div>
           ) : (
             <p className="italic text-gray-600" data-tour="stats-message">
