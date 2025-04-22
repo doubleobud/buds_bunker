@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { getBalance } from '../services/token';
 
-export default function TokenDisplay({ type = 'currency' }) {
+export default function TokenDisplay({ type = 'token' }) {
   const [balance, setBalance] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -13,11 +13,11 @@ export default function TokenDisplay({ type = 'currency' }) {
       .finally(() => setLoading(false));
   }, [type]);
 
-  if (loading) return <p>Loading {type} balance...</p>;
+  if (loading) return <p>Loading tokens...</p>;
 
   return (
     <div style={{ fontWeight: 'bold', marginBottom: '1rem' }}>
-      {type.charAt(0).toUpperCase() + type.slice(1)} Tokens: {balance ?? 0}
+      Tokens: {balance ?? 0}
     </div>
   );
 }
