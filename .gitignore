@@ -4,18 +4,17 @@
 # Production
 /build
 
-# Generated files
+# Generated
 .docusaurus
 .cache-loader
 
-# Misc
+# OS Junk
 .DS_Store
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
+# Environment Variables
+.env*
+
+# Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

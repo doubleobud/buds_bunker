@@ -1,0 +1,39 @@
+/* Basic styling for InteractionFooter */
+.wrapper {
+    border-top: 2px solid var(--ifm-color-primary);
+    margin-top: 2rem;
+    padding-top: 1rem;
+  }
+  
+  .prompt {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .options {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+  
+  .optionButton {
+    background: var(--ifm-color-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .optionButton:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .feedback {
+    font-style: italic;
+    color: var(--ifm-color-secondary);
+  }
+  
