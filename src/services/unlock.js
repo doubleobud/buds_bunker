@@ -2,44 +2,51 @@
 import { supabase } from './supabaseClient';
 import { log } from './log';
 
-export async function isUnlocked(feature_key) {
-  const {
-    data: { session },
-    error: sessionError
-  } = await supabase.auth.getSession();
-  if (sessionError || !session?.user) throw new Error('Not authenticated');
+/**
+ * Has the current user ever unlocked `featureKey`?
+ * Returns true/false.
+ */
+export async function isUnlocked(featureKey) {
+  const { data: { session }, error: sesErr } = await supabase.auth.getSession();
+  if (sesErr || !session?.user) throw new Error('Not authenticated');
 
   const { data, error } = await supabase
     .from('unlocks')
     .select('unlocked')
     .eq('user_id', session.user.id)
-    .eq('feature_key', feature_key)
-    .maybeSingle();
+    .eq('feature_key', featureKey)
+    .order('created_at', { ascending: false })
+    .limit(1);
 
   if (error) throw error;
-  return data?.unlocked ?? false;
+  return data?.length ? data[0].unlocked : false;
 }
 
-export async function unlock(feature_key, payload = {}) {
-  const {
-    data: { session },
-    error: sessionError
-  } = await supabase.auth.getSession();
-  if (sessionError || !session?.user) throw new Error('Not authenticated');
+/**
+ * Insert an unlock row (if it doesn’t exist) & log analytics.
+ */
+export async function unlock(featureKey, payload = {}) {
+  const { data: { session }, error: sesErr } = await supabase.auth.getSession();
+  if (sesErr || !session?.user) throw new Error('Not authenticated');
 
-  // check first to avoid duplicates
-  const existing = await isUnlocked(feature_key);
-  if (existing) return true;
+  // Skip if already unlocked
+  if (await isUnlocked(featureKey)) return true;
 
-  const { error: insertError } = await supabase.from('unlocks').insert({
+  const { error } = await supabase.from('unlocks').insert({
     user_id: session.user.id,
-    feature_key,
+    feature_key: featureKey,
     unlocked: true,
     payload,
   });
+  if (error) throw error;
 
-  if (insertError) throw insertError;
-
-  await log('unlock', { feature_key, payload });
+  await log('unlock', { featureKey, payload });
   return true;
 }
+
+/* --------------------------------------------------
+   Optional: keep a default export that bundles both.
+   Nothing imports this right now, but it avoids
+   accidental “missing default export” errors.
+---------------------------------------------------*/
+export default { isUnlocked, unlock };
