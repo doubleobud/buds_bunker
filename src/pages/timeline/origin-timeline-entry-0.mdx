@@ -7,64 +7,275 @@ slug: origin-timeline-entry-0
 ---
 
 import styles from '@site/src/pages/timeline/timeline.module.css';
+import ClaimTokenButton from '@site/src/components/ClaimTokenButton';
+import QuestionBlock from '@site/src/components/QuestionBlock';
 
 export default function PostLayout({ children }) {
   return <div className={styles.timelineEntryWrapper}>{children}</div>;
 }
 
-Writing this first post put me in a kind of agony, and I want to explain why.
 
-I had to build this website and figure out how you were going to interact with it, when all I really wanted to do was start from a fundamental philosophical place—something about how I use my time—and build my way into… something. I don’t even want to say a “project,” because that already feels too defined. Truth is, I’m not even sure what to call it yet.
+## Where We Begin
 
-But I did know one thing from the beginning: whatever it was going to be, I wanted to document it. I wanted to share it. I knew that sounded kind of ungrounded, maybe even a little absurd, but that’s truly where I was standing. I wanted to start from a point zero, build forward step by step, and have people coming along—not just as readers, but as participants, with some kind of profile system or character system or… whatever this turns into.
+On the Start Here page, two axiomatic claims were introduced:
 
-That’s where the conundrum comes in.
+- You know you are alive.  
+- You know your time is passing, leading to your death.
 
-I’d honestly rather hit you with a long chain of writings, all stacked in sequence, building to the point where it finally makes sense to start talking about things like website development, or how you interact with the site. But I didn’t want to hide all of that until later. I wanted you here from the beginning. Right at ground zero.
+These are not speculative theories. They are the most basic conditions of experience.  
+From them arises the guiding question of this entire project:
 
-So now I’m in this weird crunch—trying to figure out how to line up the writing with the site structure, without breaking either of them. I don’t know if I’ll get it right on the first try. But I figured it was worth saying up front.
+> What can a person do with their time while they are alive?
 
----
-
-So you clicked on this post in the Origin Timeline—thank you—and here’s what I’m actually trying to do with it.
-
-Like I said, there’s not just one thread here. There are multiple tracks happening at the same time, and I needed a format that could hold that. That’s where the card system on the timeline comes in. You’ll be able to move down each track at your own pace, in whatever order makes sense to you.
-
-One of the threads will focus on the **philosophical origin** of all this—the deeper, slower stuff that tries to understand where this whole idea even came from. Another thread jumps straight into the **website itself**—what decisions shaped it, how the technical side evolved, and what’s relevant to the user experience right now. You’ll even get to watch the site get built in real time, assuming you're here early enough.
-
-But I also want to jump immediately into **user interaction**, especially the parts related to **character development** and your **profile**. That can’t wait. As I mentioned above, I’m not holding off on the philosophical stuff—that’s going to feed right into this—but I want the interactive layer to start growing right away too.
-
-We’ll be starting with some very **primitive mechanics**—basic concepts, simple structure—but the idea is to do it in a way that’s *extensible*. Something foundational we can build on, rather than something we constantly have to rip apart and redo. Still, I expect we’ll make some early mistakes. I’m okay with that. The important thing is to just get going. I’ll make sure anything we change later makes sense, and that your progress isn’t lost along the way.
-
-So that’s the second big character here: you.  
-You’ll be shaping this space alongside me from the very beginning.  
-I’ll let you catch up here—and then I’ll keep going.
+Before we can even begin to answer that question, we first need to evaluate these axioms to see if they are something we can believe to be true with confidence—before we attempt to build upon them.
 
 ---
 
-There’s another part that feels a little out of place but has to start now, whether I like it or not.
+## You Know You Are Alive
 
-This site is going live pretty early. And it’s going to involve a **lot of writing**. Ideally, writing would’ve emerged naturally later on, as just one part of whatever this whole thing turns out to be—maybe not even as its own focus, just something that developed along the way. Then I could’ve slotted in all the structure behind it—**the research, the best practices, the training, the hours of practice**—*after* writing had proven itself necessary.
+Connecting the certainty that *something is being experienced* to the statement *you know you are alive* is not as simple as it sounds.  
+We begin not with assumptions, but with what cannot be denied—and carefully build from there.  
+From the raw presence of experience, we trace the first logical steps that lead to selfhood, change, and the foundation of a life.
 
-But here we are. The writing has already begun. You’re engaging with it now. So I’m going to treat this as my starting point too—not just for you, but for me. I’ll try to improve from here, starting with the fundamentals, just like I’m doing in every other part of this.
 
-So for now, I think there are four main tracks you’ll be able to engage with on the site:
+### A. Something is Being Experienced
 
-1. **Philosophical Origins** – What we’re even doing here and what it means to begin something like this from zero.  
-2. **Website Development** – How the technical side of the site was built, changed, and how it will evolve alongside everything else.  
-3. **Character & Interaction Design** – How your presence here becomes a profile, and eventually, a character—something that grows as the world does.  
-4. **Writing as Practice** – A thread focused on improving writing itself—starting raw and early, then slowly layering in tools, skill, and structure.
+There is one undeniable fact that stands at the beginning of all inquiry: the presence of experience itself.  
+Even if every perception, thought, or belief you hold turns out to be uncertain, experience remains undeniable.  
+The very act of questioning or doubting is itself evidence of experience.  
+Philosophers call this foundational certainty “phenomenal consciousness.”  
+Experience itself is immediately and unmistakably given.  
+This is not an assumption nor a belief.  
+It is the irreducible foundation from which all other questions must be asked.
 
-Each track will have its own interactive layer. There’ll be small tasks, chances to prove you’re following along, ways to shape your character and leave a trail behind you. Nothing major yet, just little pieces that will start to build into something over time.
+### B. Experience Implies an Experiencing Point of View
+
+For an experience to occur, it must appear somewhere.  
+It cannot exist independently, floating without context.  
+Experience is always received through a frame of reference.  
+That frame is a central perspective from which sensations, feelings, and thoughts are channeled.  
+Cognitive scientists call this the “subjective point of view.”  
+It does not imply an elaborate personal identity or narrative.  
+It simply marks the center of awareness.
+
+### C. A Point of View Implies a Self and a Not-Self
+
+Your existence does indeed seem self-evident in the purest sense, as Descartes showed us.  
+However, where does you stop and other begin?  
+How do you know you are an individual?
+
+You being a "you" is not a metaphysical given—and it never can be.  
+But we do have a great deal of experience suggesting there is, in fact, a distinction between "me" and "not-me."
+
+You experience this every day.  
+The brain organizes perception as if there is a single, unified self.  
+You create a narrative from memories and experiences that forms your sense of "self."  
+This is further reinforced by the obvious bodily boundary you experience in every waking moment.  
+You cannot directly control others, and they cannot directly control you.  
+In fact, no one else can access your point of view.  
+And society gives you consistent feedback that you are a distinct, coherent person.
+
+We are not claiming to know exactly where the boundary between "you" and "not-you" begins or ends.  
+But we can safely say such a boundary does exist, in different ways depending on the context.  
+That is enough to move forward—while noting that further exploration may be warranted later.
 
 ---
 
-So we need to get started—right away—with the things I’ve been talking about.
+## Claim Reading Reward
 
-Here’s how it’s going to work for now: **every time you click on a post**, you’ll earn what I’m calling (for now) **one token**. Tokens are your basic currency here. You’ll use them to interact with the site, unlock new content, and eventually shape your character.
+Every time you read a section of a post, you get rewarded for your effort with we will start out calling a token. These tokens can be spend to perform various actions on the site. You will see this button reguarly as you read.
 
-Right now, this site is still missing a few key pieces you’re going to need just to really use it. So we’re starting simple. You earned **one token** for opening this post. Down below, you’ll find a small question about what you’ve just read—answer it and you’ll earn more tokens. At the bottom of the page, you’ll see **two ways to spend them**. And just like that, the interaction begins.
+<ClaimTokenButton />
 
-You can always head back to the **Origin Timeline** to see where you want to go next. That’s your current hub. Within each card, you’ll be able to spend tokens, unlock new branches, and gradually develop your character by engaging with the ideas across the four tracks I mentioned above.
+## Question Bank
 
-Eventually, the timeline will give way to something more complex—a full system of paths, decisions, and interactions that open up as the world builds. That’s when we’ll start shifting toward a **dashboard-style experience**. But for now, you’re here at the beginning, and the only way forward is step by step.
+This "Question Bank" module is also one we will use often to shape your profile. This information is recorded and added to your profile page. Later I will explain in more detail who characterization works.
+
+<QuestionBlock
+  questionKey="existence_self"
+  text="Do you exist as a self?"
+/>
+
+## Unlocked Upgrades
+
+I have many times of interactions planned for this experience, and allowing you to upgrade your profile is one of them. For now we do not have much to present, but if you exist as a self, you deserve a proper name. Spend one token to name yourself. You also gained a token for answering a question. Spend both now as you need to unlock the navbar if you want to access your account or log-off. 
+
+CHARACTER NAMING UPGRADE (GPT-This button should unlock the function of character naming on the profile page rather than naming here. There should be a message after buying the upgrade to see the profile page etc.)
+
+NAVBAR BANNER UPGRADE (GPT-This will unlock the navbar for the entire site on every page.)
+
+---
+
+## You Know Your Time Is Passing
+
+We’re not just claiming that time is passing in a general, cosmic sense.  
+We’re saying time is passing for you, the individual.
+
+We’ve already established that your experience carries some separateness.  
+But how do you know time is passing for that individual self?
+
+Again, we rely on direct experience.
+
+Your sense of self does not remain static.  
+Experience is never still; sensations shift, thoughts wander, and conditions constantly change.  
+The "you" that exists is continuously undergoing transformation—even while remaining recognizable as the same observer.
+
+You observe entropy directly in your own body: a biological progression in one irreversible direction, easily visible as aging.  
+You feel hunger and then fullness; calm and then unease; memory and then forgetting.  
+These internal changes form a continuous stream, flowing unmistakably forward.
+
+You remember the past—but never the future.  
+Even the narratives you construct to give meaning to your life move forward, never backward.  
+You cannot re-enter yesterday, nor retrieve what has passed.  
+You cannot undo events that have already occurred. You can break something, but you cannot unbreak it.  
+What's done is done.
+
+Thus, your lived experience itself confirms the irreversible directionality we call **time**.  
+You know time is passing because you live within an ongoing stream of change that moves relentlessly forward, moment by moment.
+
+
+---
+
+## Claim Reading Reward
+
+<ClaimTokenButton />
+
+## Question Bank
+
+<QuestionBlock
+  questionKey="time_flow"
+  text="Is time moving forward irreversibly for you?"
+/>
+
+
+## Unlocked Upgrades
+
+So we established time is passing for you. That implies you have a certain time "you" have existed from an origin point. Of course, we capture this by measuring your age.
+
+CHARACTER AGE UPGRADE (GPT-This button should unlock the function of character age on the profile page rather than doing it here. There should be a message after buying the upgrade to see the profile page etc. They should just enter their age manually for now.)
+
+NAVBAR PROFILE SHORTCUT UPGRADE (GPT-add "Profile" to nav bar on right side")
+
+---
+
+## ...Leading to Your Death
+
+The first two claims are relatively easy to accept.  
+This one is harder. But we can limit the claim for clarity.
+
+We’re not trying to prove the totality of death—we’re simply accepting this:
+
+> At some point, the individual perspective you now have will stop.
+
+There may or may not be continuation. But in every observable case, people die and do not return.  
+This pattern is universal and uninterrupted.  
+So even if there's more to say about what comes next, we can safely claim:
+
+> You, as you currently know yourself, will end.
+
+We see this same reality in animals. In objects.  
+A physical object that is destroyed no longer exists as the thing it was.  
+It has died, in a sense—it no longer persists in its form.
+
+Death, like time and existence, seems self-evident.
+
+---
+
+## Claim Reading Reward
+
+<ClaimTokenButton />
+
+## Question Bank
+
+<QuestionBlock
+  questionKey="death_belief"
+  text="Do you believe you will die?"
+/>
+
+
+## Unlocked Upgrades
+
+We have accepted we will die. For now let's estimate how many years we have reamining using our age and the world average age of death for person on Earth. Of course, this probably will not reprsent you will at first, but we will iteratively hone our calculations as new evidence and methods emerage as we continue. For now we accept this simple starting point.
+
+LIFESPAN ESTIMATE (GPT-This button should unlock the function of character estimated remaining years before Death. We will start)
+
+NAVBAR ACCOUNT SHORTCUT UPGRADE (GPT-add "Account" to nav bar on right side")
+
+---
+
+## How We Build Characterization
+
+You’ve made several choices now—simple, foundational ones.  
+But even these early decisions begin to shape your character.
+
+Let’s first understand how.
+
+To profile someone digitally, it makes sense to describe them as a structure of symbols and relationships.  
+Symbols can be words or numbers. Relationships include reinforcement, competition, amplification, suppression.
+
+The simplest symbol is binary: either active or inactive.  
+Beyond that, we can use scalars—words tied to numerical values, which can strengthen or weaken over time.  
+We can also describe traits along spectrums, showing how a person leans between conceptual poles.
+
+These descriptors shouldn’t exist in isolation.  
+They should interact—sometimes reinforcing, sometimes suppressing each other—and behave differently across contexts.
+
+(Other modeling approaches—like latent traits, thresholds, or situational overlays—will emerge naturally later.)
+
+Our first symbolic category is Beliefs.  
+Beliefs are stored as “badges,” which consist of a label and a short definition.  
+Each badge is also associated with a confidence level that can change over time.
+
+You normally claim badges when making choices in posts. But here, we’re pausing to explain them explicitly.  
+You can now claim your first belief badges based on the axioms you’ve accepted.
+
+## Claim Reading Reward
+
+<ClaimTokenButton />
+
+---
+
+## What Conclusions Can Be Drawn?
+
+###What We’ve Established So Far
+
+Let’s briefly retrace the path we’ve taken—step by step—starting from the most basic condition of experience.
+
+-Something is being experienced
+This is the one fact that cannot be doubted. Even uncertainty itself is an experience.
+
+-Experience implies an experiencing point of view
+If something is being experienced, it must appear from somewhere. There is always a frame—even if minimal—through which experience arises.
+
+-A point of view implies a self and a not-self
+Having a perspective means there is a distinction between what is within it and what is outside it. This is the first appearance of “me” and “not-me.”
+
+-The self experiences change
+The contents of experience shift. Thoughts, sensations, and conditions move and evolve. The self is not fixed—it unfolds through time.
+
+-Change reveals an irreversible flow
+Change doesn’t reverse. It has direction. You remember the past, not the future. What happens cannot unhappen.
+
+-That directional flow is what we call time
+Your experience confirms this: time moves forward, not backward. The self is carried within a one-way stream.
+
+-Your time will end
+Everything you know about living beings and physical objects points to the same conclusion. What has a beginning also has an end. The perspective you now have—however it came to be—will one day cease.
+
+But what follows from that?
+
+Just because you exist doesn’t mean you have agency.  
+So before drawing further conclusions, we must ask:
+
+> Can you actually do anything at all?
+
+If we find that we do have agency, then the next question is immediate and inescapable:
+
+> Should we choose to continue existing at all?
+
+## Unlock Paths
+
+UNLOCK POST "DO WE HAVE AGENCY" (GPT-this does cost a token and then takes you to the new page.)
+
+
+

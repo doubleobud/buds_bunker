@@ -173,6 +173,69 @@
 }
 
 /* -------------------------------------------------- */
+/* 🆕 CUSTOM TOKEN BUTTONS */
+/* -------------------------------------------------- */
+/* Claim-Token Button: big, joyful, success-themed */
+.claim-token-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  font-size: 1.1rem;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--ifm-color-success);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.claim-token-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+.claim-token-button:active {
+  transform: scale(0.98);
+}
+.claim-token-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Spend-Token Button: subtle, primary-themed */
+.spend-token-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  border: 1px solid var(--ifm-color-primary-lightest);
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: 600;
+
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+.spend-token-button:hover {
+  background-color: var(--ifm-color-primary-lightest);
+  transform: translateY(-1px);
+}
+.spend-token-button:active {
+  transform: translateY(0);
+}
+.spend-token-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* -------------------------------------------------- */
 /* 🧯 REMOVE TOC ON START HERE PAGE ONLY */
 /* -------------------------------------------------- */
 .start-here-page .theme-doc-toc-desktop,
@@ -284,4 +347,33 @@ html[data-navbar='false'] .hero {
   font-size: 0.85rem;
   color: #666;
   margin-top: 0.5rem;
+}
+
+/* -------------------------------------------------- */
+/* 🆕 CUSTOM TOKEN BUTTONS */
+/* -------------------------------------------------- */
+.claim-token-button {
+  /* styles as previously defined */
+}
+
+.spend-token-button {
+  /* styles as previously defined */
+}
+
+/* -------------------------------------------------- */
+/* 🆕 REWARD POPUP STYLING */
+/* -------------------------------------------------- */
+@keyframes popupIn { /* … */ }
+@keyframes popupOut { /* … */ }
+
+.reward-overlay { /* full-screen dimmed overlay, z-index:1000 */ }
+.reward-popup {
+  /* centered box, bg, padding, border-radius, box-shadow */
+  animation: popupIn 0.4s ease-out;
+}
+.reward-popup.exit {
+  animation: popupOut 0.3s ease-in forwards;
+}
+[data-theme='dark'] .reward-popup {
+  background: #2b2f31;
 }

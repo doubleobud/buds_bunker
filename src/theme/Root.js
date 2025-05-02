@@ -1,7 +1,10 @@
+// src/theme/Root.js
+
 import React, { useEffect } from 'react';
 import { PlayerProvider, usePlayer } from '@site/src/contexts/PlayerContext';
+import RewardProvider from '@site/src/components/RewardPopupContext'; // default export
 
-// ✅ Hydration-time suppression to prevent navbar flash
+// Hydration-time suppression to prevent navbar flash
 if (typeof document !== 'undefined') {
   document.documentElement.setAttribute('data-navbar', 'false');
 }
@@ -27,7 +30,11 @@ const UnlockHandler = ({ children }) => {
 export default function Root({ children }) {
   return (
     <PlayerProvider>
-      <UnlockHandler>{children}</UnlockHandler>
+      <RewardProvider>
+        <UnlockHandler>
+          {children}
+        </UnlockHandler>
+      </RewardProvider>
     </PlayerProvider>
   );
 }
